@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.exe
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.deps.json
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.runtimeconfig.json
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.dll
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\bin\Debug\net5.0\Day 11 - Repetoire App.pdb
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.dll
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\refint\Day 11 - Repetoire App.dll
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.pdb
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\Day 11 - Repetoire App.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\Day 11 - Repetoire App\Day 11 - Repetoire App\obj\Debug\net5.0\ref\Day 11 - Repetoire App.dll

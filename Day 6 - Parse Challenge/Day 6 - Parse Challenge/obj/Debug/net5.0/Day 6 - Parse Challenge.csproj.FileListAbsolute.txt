@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.exe
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.deps.json
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.runtimeconfig.json
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.dll
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\bin\Debug\net5.0\Day 6 - Parse Challenge.pdb
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.dll
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\refint\Day 6 - Parse Challenge.dll
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.pdb
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\Day 6 - Parse Challenge.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\Day 6 - Parse Challenge\Day 6 - Parse Challenge\obj\Debug\net5.0\ref\Day 6 - Parse Challenge.dll

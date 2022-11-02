@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.exe
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.deps.json
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.runtimeconfig.json
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.dll
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\bin\Debug\net5.0\Day 10 - Grocery App.pdb
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.dll
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\refint\Day 10 - Grocery App.dll
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.pdb
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\Day 10 - Grocery App.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\Day 10 - Grocery App\Day 10 - Grocery App\obj\Debug\net5.0\ref\Day 10 - Grocery App.dll

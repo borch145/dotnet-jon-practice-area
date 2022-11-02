@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.exe
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.deps.json
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.runtimeconfig.json
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.dll
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\bin\Debug\net5.0\ToDoListRedo.pdb
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.dll
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\refint\ToDoListRedo.dll
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.pdb
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ToDoListRedo.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\ToDoListRedo\ToDoListRedo\obj\Debug\net5.0\ref\ToDoListRedo.dll

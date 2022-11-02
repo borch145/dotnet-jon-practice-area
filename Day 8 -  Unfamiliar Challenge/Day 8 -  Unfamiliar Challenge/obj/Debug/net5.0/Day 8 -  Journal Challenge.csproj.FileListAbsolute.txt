@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.exe
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.deps.json
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.runtimeconfig.json
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.dll
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\bin\Debug\net5.0\Day 8 -  Journal Challenge.pdb
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.dll
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\refint\Day 8 -  Journal Challenge.dll
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.pdb
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\Day 8 -  Journal Challenge.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\Day 8 -  Unfamiliar Challenge\Day 8 -  Unfamiliar Challenge\obj\Debug\net5.0\ref\Day 8 -  Journal Challenge.dll

@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.exe
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.deps.json
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.runtimeconfig.json
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.dll
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\bin\Debug\net5.0\Day 11 Homework = ToDoApp.pdb
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.dll
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\refint\Day 11 Homework = ToDoApp.dll
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.pdb
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\Day 11 Homework = ToDoApp.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\Day 11 Homework = ToDoApp\Day 11 Homework = ToDoApp\obj\Debug\net5.0\ref\Day 11 Homework = ToDoApp.dll

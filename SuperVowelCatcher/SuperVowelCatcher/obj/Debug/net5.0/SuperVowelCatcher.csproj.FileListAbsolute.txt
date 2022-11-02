@@ -1,0 +1,16 @@
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.exe
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.deps.json
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.runtimeconfig.json
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.dll
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\bin\Debug\net5.0\SuperVowelCatcher.pdb
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.dll
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\refint\SuperVowelCatcher.dll
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.pdb
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\SuperVowelCatcher.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\SuperVowelCatcher\SuperVowelCatcher\obj\Debug\net5.0\ref\SuperVowelCatcher.dll
