@@ -12,3 +12,17 @@ C:\Users\Jonquil\source\repos\InterfaceExercise\InterfaceExercise\bin\Debug\netc
 C:\Users\Jonquil\source\repos\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.dll
 C:\Users\Jonquil\source\repos\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.pdb
 C:\Users\Jonquil\source\repos\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.genruntimeconfig.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.exe
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.deps.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.runtimeconfig.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\bin\Debug\netcoreapp3.1\InterfaceExercise.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InterfaceExercise\InterfaceExercise\obj\Debug\netcoreapp3.1\InterfaceExercise.genruntimeconfig.cache

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\InterfaceExercise\\InterfaceExercise\\InterfaceExercise.csproj",
+      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceExercise\\InterfaceExercise\\InterfaceExercise.csproj",
       "projectName": "InterfaceExercise",
-      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceExercise\\InterfaceExercise\\InterfaceExercise.csproj",
+      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceExercise\\InterfaceExercise\\InterfaceExercise.csproj",
       "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceExercise\\InterfaceExercise\\obj\\",
+      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceExercise\\InterfaceExercise\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",

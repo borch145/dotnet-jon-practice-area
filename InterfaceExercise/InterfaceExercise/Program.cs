@@ -21,16 +21,12 @@ namespace InterfaceExercise
 
             while (payDay)
             {
-                GetPaid(employeeCEO);
-                GetPaid(employeeReceptionist);
+                employeeCEO.GetPaid();
+                employeeReceptionist.GetPaid();
+                Console.ReadKey();
             }
         }
 
-        public static void GetPaid(IEmployee employee)
-        {
-            employee.PaidToDate = employee.PaidToDate + employee.WeeklySalary;
-            Console.WriteLine(employee.Title + " " + employee.Name + " has been paid $" + employee.WeeklySalary + ". They have been paid $" + employee.PaidToDate + " to date.");
-            Console.ReadKey();
-        }
+     
     }
 }

@@ -20,10 +20,10 @@ namespace InterfaceExercise
         }
 
 
-        //    public void GetPaid()
-        //    {
-        //        PaidToDate = PaidToDate + WeeklySalary;
-        //        Console.WriteLine(Title + " " + Name + " has been paid $" + WeeklySalary + ". They have been paid $" + PaidToDate + " to date.");
-        //    }
+        public void GetPaid()
+        {
+            PaidToDate = PaidToDate + WeeklySalary;
+            Console.WriteLine(Title + " " + Name + " has been paid $" + WeeklySalary + ". They have been paid $" + PaidToDate + " to date.");
+        }
     }
 }

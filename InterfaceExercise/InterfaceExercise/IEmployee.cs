@@ -11,7 +11,7 @@ namespace InterfaceExercise
         public decimal WeeklySalary { get; set; }
         public decimal PaidToDate { get; set; }
 
-        
+        public void GetPaid();
     }
 
     
