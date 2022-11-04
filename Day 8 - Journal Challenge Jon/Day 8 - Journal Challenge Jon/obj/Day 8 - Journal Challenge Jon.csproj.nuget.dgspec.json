@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonquil\\source\\repos\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj": {}
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonquil\\source\\repos\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj": {
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj",
+        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj",
         "projectName": "Day 8 - Journal Challenge Jon",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj",
+        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon.csproj",
         "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\obj\\",
+        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 8 - Journal Challenge Jon\\Day 8 - Journal Challenge Jon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",

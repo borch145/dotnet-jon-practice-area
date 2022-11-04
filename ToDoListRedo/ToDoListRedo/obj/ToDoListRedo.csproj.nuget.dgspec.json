@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonquil\\source\\repos\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj": {}
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonquil\\source\\repos\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj": {
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj",
+        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj",
         "projectName": "ToDoListRedo",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj",
+        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ToDoListRedo\\ToDoListRedo\\ToDoListRedo.csproj",
         "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\ToDoListRedo\\ToDoListRedo\\obj\\",
+        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ToDoListRedo\\ToDoListRedo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",

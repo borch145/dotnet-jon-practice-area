@@ -37,7 +37,7 @@ namespace ToDoListRedo.BLL
             Console.Clear();
             ListItems();
             Console.WriteLine("Which item would you like to edit?");
-            int idSelection = try
+            int idSelection =
         }
 
         internal void ListItems()
