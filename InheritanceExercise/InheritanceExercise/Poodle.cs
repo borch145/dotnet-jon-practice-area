@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InheritanceExercise
 {
-    internal class Poodle
+    public class Poodle : Dog
     {
         public int Size;
         public string Activity;

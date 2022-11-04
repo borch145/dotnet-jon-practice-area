@@ -1,0 +1,14 @@
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.exe
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.deps.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.runtimeconfig.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\bin\Debug\netcoreapp3.1\InheritanceExercise.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\InheritanceExercise\InheritanceExercise\obj\Debug\netcoreapp3.1\InheritanceExercise.genruntimeconfig.cache
