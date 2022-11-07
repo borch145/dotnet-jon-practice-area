@@ -1,0 +1,14 @@
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.exe
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.deps.json
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.runtimeconfig.json
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.dll
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\bin\Debug\netcoreapp3.1\InterfaceDemo2.pdb
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.dll
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.pdb
+C:\Users\Jonquil\source\repos\InterfaceDemo2\InterfaceDemo2\obj\Debug\netcoreapp3.1\InterfaceDemo2.genruntimeconfig.cache
