@@ -31,9 +31,9 @@ namespace InterfaceDemo2
                 result = GameResult.Tie;
             }
             else if (
-                    (p1Choice == Choice.rock && p2choice == Choice.scissors) ||
-                    (p1Choice == Choice.paper && p2choice == Choice.rock) ||
-                    (p1Choice == Choice.scissors && p2choice == Choice.paper)
+                    (p1Choice == Choice.Rock && p2choice == Choice.Scissors) ||
+                    (p1Choice == Choice.Paper && p2choice == Choice.Rock) ||
+                    (p1Choice == Choice.Scissors && p2choice == Choice.Paper)
                     )
             {
                 result = GameResult.Player1Win;

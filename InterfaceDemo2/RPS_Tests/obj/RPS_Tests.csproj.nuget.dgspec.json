@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj": {}
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj": {
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj",
+        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj",
         "projectName": "InterfaceDemo2",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj",
+        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj",
         "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\obj\\",
+        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj": {
+    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
         "projectName": "RPS_Tests",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
+        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
         "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\obj\\",
+        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj": {
-                "projectPath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj"
+              "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj": {
+                "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\InterfaceDemo2\\InterfaceDemo2.csproj"
               }
             }
           }

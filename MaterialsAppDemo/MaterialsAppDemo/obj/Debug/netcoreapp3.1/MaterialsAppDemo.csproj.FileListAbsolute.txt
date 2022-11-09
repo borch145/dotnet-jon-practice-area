@@ -1,0 +1,14 @@
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.exe
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.deps.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.runtimeconfig.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\bin\Debug\netcoreapp3.1\MaterialsAppDemo.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\MaterialsAppDemo\MaterialsAppDemo\obj\Debug\netcoreapp3.1\MaterialsAppDemo.genruntimeconfig.cache

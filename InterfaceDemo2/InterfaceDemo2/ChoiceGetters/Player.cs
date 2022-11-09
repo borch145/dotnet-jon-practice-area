@@ -32,13 +32,13 @@ namespace InterfaceDemo2.ChoiceGetters
             switch (input)
             {
                 case "r":
-                    choice = Choice.rock;
+                    choice = Choice.Rock;
                     break;
                 case "p":
-                    choice = Choice.paper;
+                    choice = Choice.Paper;
                     break;
                 case "s":
-                    choice = Choice.scissors;
+                    choice = Choice.Scissors;
                     break;
                 default:
                     throw new Exception("Player GetChoice input did not return a valid choice");

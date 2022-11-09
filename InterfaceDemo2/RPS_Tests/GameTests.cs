@@ -10,15 +10,15 @@ namespace RPS_Tests
     public class GameTests
     {
         [Theory]
-        [InlineData(Choice.paper, Choice.paper, GameResult.Tie)]
-        [InlineData(Choice.paper, Choice.rock, GameResult.Player1Win)]
-        [InlineData(Choice.paper, Choice.scissors, GameResult.Player2Win)]
-        [InlineData(Choice.rock, Choice.paper, GameResult.Player2Win)]
-        [InlineData(Choice.rock, Choice.rock, GameResult.Tie)]
-        [InlineData(Choice.rock, Choice.scissors, GameResult.Player1Win)]
-        [InlineData(Choice.scissors, Choice.paper, GameResult.Player1Win)]
-        [InlineData(Choice.scissors, Choice.rock, GameResult.Player2Win)]
-        [InlineData(Choice.scissors, Choice.scissors, GameResult.Tie)]
+        [InlineData(Choice.Paper, Choice.Paper, GameResult.Tie)]
+        [InlineData(Choice.Paper, Choice.Rock, GameResult.Player1Win)]
+        [InlineData(Choice.Paper, Choice.Scissors, GameResult.Player2Win)]
+        [InlineData(Choice.Rock, Choice.Paper, GameResult.Player2Win)]
+        [InlineData(Choice.Rock, Choice.Rock, GameResult.Tie)]
+        [InlineData(Choice.Rock, Choice.Scissors, GameResult.Player1Win)]
+        [InlineData(Choice.Scissors, Choice.Paper, GameResult.Player1Win)]
+        [InlineData(Choice.Scissors, Choice.Rock, GameResult.Player2Win)]
+        [InlineData(Choice.Scissors, Choice.Scissors, GameResult.Tie)]
         public void Game_GetResult_CanGetCorrectResult(Choice p1Choice, Choice p2Choice, GameResult expectedResult)
         {
             Game game = new Game();
@@ -29,15 +29,15 @@ namespace RPS_Tests
 
 
         [Theory]
-        [InlineData(Choice.paper, Choice.paper, GameResult.Tie, $"P1: {Choice.paper} P2: {Choice.paper} \n{Choice.paper} matches {Choice.paper}. It's a Tie!")]
-        [InlineData(Choice.paper, Choice.rock, GameResult.Player1Win, $"P1: {Choice.paper} P2: {Choice.rock} \n{Choice.paper} beats {Choice.rock}. Player 1 Wins!"]
-        [InlineData(Choice.paper, Choice.scissors, GameResult.Player2Win, $"P1: {Choice.paper} P2: {Choice.scissors} \n{Choice.scissors} beats {Choice.paper}. Player 2 Wins!"]
-        [InlineData(Choice.rock, Choice.paper, GameResult.Player2Win, $"P1: {Choice.rock} P2: {Choice.paper} \n{Choice.paper} beats {Choice.rock}. Player 2 Wins!"]
-        [InlineData(Choice.rock, Choice.rock, GameResult.Tie, $"P1: {Choice.rock} P2: {Choice.rock} \n{Choice.rock} matches {Choice.rock}. It's a Tie!"]
-        [InlineData(Choice.rock, Choice.scissors, GameResult.Player1Win, $"P1: {Choice.rock} P2: {Choice.scissors} \n{Choice.rock} beats {Choice.scissors}. Player 1 Wins!")]
-        [InlineData(Choice.scissors, Choice.paper, GameResult.Player1Win, $"P1: {Choice.scissors} P2: {Choice.paper} \n{Choice.scissors} beats {Choice.paper}. Player 1 Wins!")]
-        [InlineData(Choice.scissors, Choice.rock, GameResult.Player2Win, $"P1: {Choice.scissors} P2: {Choice.rock} \n{Choice.rock} beats {Choice.scissors}. Player 2 Wins!")]
-        [InlineData(Choice.scissors, Choice.scissors, GameResult.Tie, $"P1: {Choice.scissors} P2: {Choice.scissors} \n{Choice.scissors} matches {Choice.scissors}. It's a Tie!")]
+        [InlineData(Choice.Paper, Choice.Paper, GameResult.Tie, "P1: Paper P2: Paper \nPaper matches Paper. It's a Tie!")]
+        [InlineData(Choice.Paper, Choice.Rock, GameResult.Player1Win, "P1: Paper P2: Rock \nPaper beats Rock. Player 1 Wins!")]
+        [InlineData(Choice.Paper, Choice.Scissors, GameResult.Player2Win, "P1: Paper P2: Scissors \nScissors beats Paper. Player 2 Wins!")]
+        [InlineData(Choice.Rock, Choice.Paper, GameResult.Player2Win, "P1: Rock P2: Paper \nPaper beats Rock. Player 2 Wins!")]
+        [InlineData(Choice.Rock, Choice.Rock, GameResult.Tie, "P1: Rock P2: Rock \nRock matches Rock. It's a Tie!")]
+        [InlineData(Choice.Rock, Choice.Scissors, GameResult.Player1Win, "P1: Rock P2: Scissors \nRock beats Scissors. Player 1 Wins!")]
+        [InlineData(Choice.Scissors, Choice.Paper, GameResult.Player1Win, "P1: Scissors P2: Paper \nScissors beats Paper. Player 1 Wins!")]
+        [InlineData(Choice.Scissors, Choice.Rock, GameResult.Player2Win, "P1: Scissors P2: Rock \nRock beats Scissors. Player 2 Wins!")]
+        [InlineData(Choice.Scissors, Choice.Scissors, GameResult.Tie, "P1: Scissors P2: Scissors \nScissors matches Scissors. It's a Tie!")]
         public void Game_GetResultMessage(Choice p1Choice, Choice p2Choice, GameResult result, string expectedString)
         {
             Game game = new Game();

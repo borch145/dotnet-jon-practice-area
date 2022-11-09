@@ -6,8 +6,8 @@ namespace InterfaceDemo2.Models
 {
     public enum Choice
     {
-        rock,
-        paper,
-        scissors
+        Rock,
+        Paper,
+        Scissors
     }
 }

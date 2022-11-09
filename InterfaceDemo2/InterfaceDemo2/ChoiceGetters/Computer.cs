@@ -18,11 +18,11 @@ namespace InterfaceDemo2.ChoiceGetters
             switch(number)
             {
                 case 1:
-                    return Choice.rock;
+                    return Choice.Rock;
                 case 2:
-                    return Choice.paper;
+                    return Choice.Paper;
                 case 3:
-                    return Choice.scissors;
+                    return Choice.Scissors;
                 default:
                     throw new Exception("Error: RngChoice didn't return a value 1-3");
 

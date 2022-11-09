@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8PsiIx2vq3bm5omZv+Y/T2U/f6SJ/+MDEWSMjPo3IAQ+Cct+3zcYH0QlyhSXIggVP7ZUHPalTpuuShV4yRgVyg==",
+  "dgSpecHash": "wFmhxwZcc/i5DzWYRZEptU6wwd+PUX4NS3pdSZ5bz4feASzKDMYkRJoiryZOYlCoipnHyw3WAKSwqgsxGANv8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jonquil\\source\\repos\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
+  "projectFilePath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\InterfaceDemo2\\RPS_Tests\\RPS_Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonquil\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Jonquil\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
