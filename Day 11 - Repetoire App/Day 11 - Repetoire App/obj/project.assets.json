@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\Day 11 - Repetoire App.csproj",
+      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\Day 11 - Repetoire App.csproj",
       "projectName": "Day 11 - Repetoire App",
-      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\Day 11 - Repetoire App.csproj",
+      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\Day 11 - Repetoire App.csproj",
       "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\obj\\",
+      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\Day 11 - Repetoire App\\Day 11 - Repetoire App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",

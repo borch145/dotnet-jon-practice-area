@@ -39,61 +39,21 @@ namespace MaterialsAppDemo.Data
         {
             return user;
         }
-        public int DepositResource(User user, ResourceTypes resource, int amount)
-        {
-            switch(resource)
-            {
-                case ResourceTypes.Wood:
-                    user.WoodCount += amount;
-                    return user.WoodCount;
-                    
-                case ResourceTypes.Stone:
-                    user.StoneCount += amount;
-                    return user.StoneCount;
-                    ;
-                case ResourceTypes.Iron:
-                    user.IronCount += amount;
-                    return user.IronCount;
-                    
-                case ResourceTypes.Gold:
-                    user.GoldCount += amount;
-                    return user.GoldCount;
-                    
-                default:
-                    return 0;   
-                    
-            }
-            
-        }
-        public int WithdrawResource(User user, ResourceTypes resource, int amount)
-        {
-            switch (resource)
-            {
-                case ResourceTypes.Wood:
-                    user.WoodCount -= amount;
-                    return user.WoodCount;
+        public int DepositWood(User user, ResourceTypes resource, int amount) => user.WoodCount += amount;
 
-                case ResourceTypes.Stone:
-                    user.StoneCount -= amount;
-                    return user.StoneCount;
-                    ;
-                case ResourceTypes.Iron:
-                    user.IronCount -= amount;
-                    return user.IronCount;
+        public int DepositStone(User user, ResourceTypes resource, int amount) => user.StoneCount += amount;
+        public int DepositIron(User user, ResourceTypes resource, int amount) => user.IronCount += amount;
+        public int DepositGold(User user, ResourceTypes resource, int amount) => user.GoldCount += amount;
+        
+        public int WithdrawWood(User user, ResourceTypes resource, int amount) => user.WoodCount -= amount;
 
-                case ResourceTypes.Gold:
-                    user.GoldCount -= amount;
-                    return user.GoldCount;
-
-                default:
-                    return 0;
-
-            }
-        }
+        public int WithdrawStone(User user, ResourceTypes resource, int amount) => user.StoneCount -= amount;
+        public int WithdrawIron(User user, ResourceTypes resource, int amount) => user.IronCount -= amount;
+        public int WithdrawGold(User user, ResourceTypes resource, int amount) => user.GoldCount -= amount;
         public User Authenticate(string username)
         {
-            var user = Users.SingleOrDefault(user => user.UserName == username);
-            return user;
+                var user = Users.SingleOrDefault(user => user.UserName == username);
+                return user;
         }
     }
 }

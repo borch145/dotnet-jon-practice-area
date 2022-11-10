@@ -51,7 +51,7 @@ namespace MaterialsAppDemo.BLL
             {
                 var resourceType = AskResourceType();
                 var resourceAmount = AskResourceAmount();
-                int newTotal = IDataSource.DepositResource(user, resourceType, resourceAmount);
+                int newTotal = RouteDeposit(user, resourceType, resourceAmount);
                 Console.WriteLine($"Success! {resourceAmount} {resourceType} has been deposited in {user.UserName}'s account. The new {resourceType} balance is {newTotal}.");
                 Console.WriteLine("Press any key to return to main menu.");
                 Console.ReadKey();
@@ -63,7 +63,56 @@ namespace MaterialsAppDemo.BLL
             }
         }
 
-        
+        private int RouteDeposit(User user, ResourceTypes resourceType, int resourceAmount)
+        {
+            switch (resourceType)
+            {
+                case ResourceTypes.Wood:
+                    return IDataSource.DepositWood(user, resourceType, resourceAmount);
+                    
+                    
+                case ResourceTypes.Stone:
+                    return IDataSource.DepositStone(user, resourceType, resourceAmount);
+                    
+                  
+                case ResourceTypes.Iron:
+                    return IDataSource.DepositIron(user, resourceType, resourceAmount);
+                   
+
+                case ResourceTypes.Gold:
+                    return IDataSource.DepositGold(user, resourceType, resourceAmount);
+                  
+
+                default:
+                    throw new Exception("Error: RouteDeposit did not route successfully.");
+
+            }
+        }
+        private int RouteWithdrawal(User user, ResourceTypes resourceType, int resourceAmount)
+        {
+            switch (resourceType)
+            {
+                case ResourceTypes.Wood:
+                    return IDataSource.WithdrawWood(user, resourceType, resourceAmount);
+
+
+                case ResourceTypes.Stone:
+                    return IDataSource.WithdrawStone(user, resourceType, resourceAmount);
+
+
+                case ResourceTypes.Iron:
+                    return IDataSource.WithdrawIron(user, resourceType, resourceAmount);
+
+
+                case ResourceTypes.Gold:
+                    return IDataSource.WithdrawGold(user, resourceType, resourceAmount);
+
+
+                default:
+                    throw new Exception("Error: RouteWithdrawal did not route successfully.");
+
+            }
+        }
 
         private int AskResourceAmount()
         {
@@ -100,7 +149,7 @@ namespace MaterialsAppDemo.BLL
             Console.WriteLine("4. Gold");
 
 
-
+           
 
             var cki = Console.ReadKey(true);
 
@@ -142,7 +191,7 @@ namespace MaterialsAppDemo.BLL
 
                      if (sufficientBalance)
                      {
-                    int newTotal = IDataSource.WithdrawResource(user, resourceType, resourceAmount);
+                    int newTotal = RouteWithdrawal(user, resourceType, resourceAmount);
                     Console.WriteLine($"Success! {resourceAmount} {resourceType} has been withdrawn from {user.UserName}'s account. The new {resourceType} balance is {newTotal}.");
                     Console.WriteLine("Press any key to return to main menu.");
                     Console.ReadKey();
