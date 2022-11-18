@@ -7,11 +7,9 @@ using System.Text;
 
 namespace MaterialsAppDemo.Data
 {
-    class InMemoryDataSources : IDataSource
+    public class InMemoryDataSources : IDataSource
     {
-        private List<User> Users { get; set; }
-       
-
+        public List<User> Users { get; set; }
         public InMemoryDataSources()
         {
             Users = new List<User>()
@@ -34,26 +32,25 @@ namespace MaterialsAppDemo.Data
                 }
             };
         }
-
-        public User CheckResources(User user)
-        {
-            return user;
-        }
-        public int DepositWood(User user, ResourceTypes resource, int amount) => user.WoodCount += amount;
-
-        public int DepositStone(User user, ResourceTypes resource, int amount) => user.StoneCount += amount;
-        public int DepositIron(User user, ResourceTypes resource, int amount) => user.IronCount += amount;
-        public int DepositGold(User user, ResourceTypes resource, int amount) => user.GoldCount += amount;
-        
-        public int WithdrawWood(User user, ResourceTypes resource, int amount) => user.WoodCount -= amount;
-
-        public int WithdrawStone(User user, ResourceTypes resource, int amount) => user.StoneCount -= amount;
-        public int WithdrawIron(User user, ResourceTypes resource, int amount) => user.IronCount -= amount;
-        public int WithdrawGold(User user, ResourceTypes resource, int amount) => user.GoldCount -= amount;
+       
         public User Authenticate(string username)
         {
-                var user = Users.SingleOrDefault(user => user.UserName == username);
-                return user;
+            var user = Users.SingleOrDefault(user => user.UserName == username);
+            return user;
         }
+
+        #region Deposit Methods
+        public int DepositWood(User user, int amount) => user.WoodCount += amount;
+        public int DepositStone(User user, int amount) => user.StoneCount += amount;
+        public int DepositIron(User user, int amount) => user.IronCount += amount;
+        public int DepositGold(User user, int amount) => user.GoldCount += amount;
+        #endregion
+
+        #region Withdraw Methods
+        public int WithdrawWood(User user, int amount) => user.WoodCount -= amount;
+        public int WithdrawStone(User user, int amount) => user.StoneCount -= amount;
+        public int WithdrawIron(User user, int amount) => user.IronCount -= amount;
+        public int WithdrawGold(User user, int amount) => user.GoldCount -= amount;
+        #endregion
     }
 }

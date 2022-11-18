@@ -4,11 +4,12 @@ using System.Text;
 
 namespace MaterialsAppDemo.Models
 {
-    enum ResourceTypes
+    public enum ResourceTypes
     {
         Wood,
         Stone,
         Iron,
-        Gold
+        Gold,
+        Invalid
     }
 }

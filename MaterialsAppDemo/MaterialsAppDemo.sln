@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialsAppDemo", "MaterialsAppDemo\MaterialsAppDemo.csproj", "{D6D55F0C-6E1B-47EF-8EAF-2FB6382F835E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialsAppDemo", "MaterialsAppDemo\MaterialsAppDemo.csproj", "{D6D55F0C-6E1B-47EF-8EAF-2FB6382F835E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{E895329C-D2FD-498A-8ED7-E3613DB0E2A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D6D55F0C-6E1B-47EF-8EAF-2FB6382F835E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D55F0C-6E1B-47EF-8EAF-2FB6382F835E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D55F0C-6E1B-47EF-8EAF-2FB6382F835E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E895329C-D2FD-498A-8ED7-E3613DB0E2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E895329C-D2FD-498A-8ED7-E3613DB0E2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E895329C-D2FD-498A-8ED7-E3613DB0E2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E895329C-D2FD-498A-8ED7-E3613DB0E2A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
