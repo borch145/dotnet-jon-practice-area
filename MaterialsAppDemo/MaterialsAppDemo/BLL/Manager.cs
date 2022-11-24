@@ -17,64 +17,93 @@ namespace MaterialsAppDemo.BLL
         public WorkflowResponse CheckResources(string username)
         {
             WorkflowResponse response = new WorkflowResponse();
-            response.User = IDataSource.Authenticate(username);
-            if (response.User != null)
+            try
             {
-                response.Success = true;
-                return response;
+                
+                response.User = IDataSource.Authenticate(username);
+                if (response.User != null)
+                {
+                    response.Success = true;
+                    return response;
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Message = "Invalid user. Press any key to return to main menu.";
+                    return response;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                response.Success = false;   
-                response.Message = "Invalid user. Press any key to return to main menu.";
+                response.Message = ex.Message;
+                response.Success = false;
                 return response;
+
             }
         }
         public WorkflowResponse DepositResource(string username, ResourceTypes resourceType, int resourceAmount)
         {
             WorkflowResponse workflowResponse = new WorkflowResponse();
-            workflowResponse.User = IDataSource.Authenticate(username);
-            if (workflowResponse.User != null)
+
+            try
             {
-                workflowResponse.Success = true;
-                int newTotal = RouteDeposit(workflowResponse.User, resourceType, resourceAmount);
-                workflowResponse.Message = $"Success! {resourceAmount} {resourceType} has been deposited in {workflowResponse.User.UserName}'s account. The new {resourceType} balance is {newTotal}.";
-                return workflowResponse;
+                workflowResponse.User = IDataSource.Authenticate(username);
+                if (workflowResponse.User != null)
+                {
+                    workflowResponse.Success = true;
+                    int newTotal = RouteDeposit(workflowResponse.User, resourceType, resourceAmount);
+                    workflowResponse.Message = $"Success! {resourceAmount} {resourceType} has been deposited in {workflowResponse.User.UserName}'s account. The new {resourceType} balance is {newTotal}.";
+                    return workflowResponse;
+                }
+                else
+                {
+                    workflowResponse.Message = "Invalid user.";
+                    return workflowResponse;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                workflowResponse.Message = "Invalid user.";
-                return workflowResponse;    
+                workflowResponse.Success = false;
+                workflowResponse.Message = ex.Message;
+                return workflowResponse;
             }
         }
         public WorkflowResponse WithdrawResource(string username, ResourceTypes resourceType, int resourceAmount)
         {
             WorkflowResponse workflowResponse = new WorkflowResponse();
-            workflowResponse.User = IDataSource.Authenticate(username);
-
-            if (workflowResponse.User != null)
+            try
             {
-                bool sufficientBalance = CheckForSufficientFunds(workflowResponse.User, resourceType, resourceAmount);
+                workflowResponse.User = IDataSource.Authenticate(username);
 
-                if (sufficientBalance)
+                if (workflowResponse.User != null)
                 {
-                    int newTotal = RouteWithdrawal(workflowResponse.User, resourceType, resourceAmount);
-                    workflowResponse.Message = $"Success! {resourceAmount} {resourceType} has been withdrawn from {workflowResponse.User.UserName}'s account. The new {resourceType} balance is {newTotal}.";
-                    workflowResponse.Success = true;
+                    bool sufficientBalance = CheckForSufficientFunds(workflowResponse.User, resourceType, resourceAmount);
+
+                    if (sufficientBalance)
+                    {
+                        int newTotal = RouteWithdrawal(workflowResponse.User, resourceType, resourceAmount);
+                        workflowResponse.Message = $"Success! {resourceAmount} {resourceType} has been withdrawn from {workflowResponse.User.UserName}'s account. The new {resourceType} balance is {newTotal}.";
+                        workflowResponse.Success = true;
+                    }
+                    else
+                    {
+                        workflowResponse.Message = "Insufficient Balance. Press any key to return to main menu.";
+                        workflowResponse.Success = false;
+                    }
                 }
                 else
                 {
-                    workflowResponse.Message = "Insufficient Balance. Press any key to return to main menu.";
+                    workflowResponse.Message = "Invalid user. Press any key to return to main menu.";
                     workflowResponse.Success = false;
                 }
+                return workflowResponse;
             }
-            else
+            catch(Exception ex)
             {
-                workflowResponse.Message = "Invalid user. Press any key to return to main menu.";
-                workflowResponse.Success = false;
+                workflowResponse.Success=false;
+                workflowResponse.Message = ex.Message;
+                return workflowResponse;
             }
-            return workflowResponse;
-
         }
         public int RouteDeposit(User user, ResourceTypes resourceType, int resourceAmount)
         {

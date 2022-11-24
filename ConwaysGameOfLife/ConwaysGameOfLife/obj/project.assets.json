@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    ".NETCoreApp,Version=v3.1": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": []
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\Jonquil\\.nuget\\packages\\": {}
@@ -13,26 +13,26 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\SuperVowelCatcher\\SuperVowelCatcher\\SuperVowelCatcher.csproj",
-      "projectName": "SuperVowelCatcher",
-      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\SuperVowelCatcher\\SuperVowelCatcher\\SuperVowelCatcher.csproj",
+      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ConwaysGameOfLife\\ConwaysGameOfLife\\ConwaysGameOfLife.csproj",
+      "projectName": "ConwaysGameOfLife",
+      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ConwaysGameOfLife\\ConwaysGameOfLife\\ConwaysGameOfLife.csproj",
       "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\SuperVowelCatcher\\SuperVowelCatcher\\obj\\",
+      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\ConwaysGameOfLife\\ConwaysGameOfLife\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -43,8 +43,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
