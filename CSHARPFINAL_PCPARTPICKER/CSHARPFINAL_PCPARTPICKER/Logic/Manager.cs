@@ -77,7 +77,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
             }
             stringBuilder.Append("│                                                  │\n" +
                                  "╞══════════════════════════════════════════════════╡\n" +
-                                $"│                        Coupon Savings: {Math.Round(costTotal*.10m,2, MidpointRounding.ToEven)}         \n" +
+                                $"│                        Coupon Savings: {(CurrentUser.IsEmployee ? (Math.Round(costTotal*.10m,2, MidpointRounding.ToEven)) : 0.00m)}         \n" +
                                 $"│                              Subtotal: {Math.Round(costTotal,2, MidpointRounding.ToEven)}                        \n" +
                                 $"│                      7.125% Sales Tax: {Math.Round(costTotal *.07125m,2, MidpointRounding.ToEven)}                    \n" +
                                 $"│                           Grand Total: {Math.Round(costTotal *1.07125m,2, MidpointRounding.ToEven)}                     \n" +
