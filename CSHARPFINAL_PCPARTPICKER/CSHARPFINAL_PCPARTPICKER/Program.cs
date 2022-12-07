@@ -13,6 +13,7 @@ namespace CSHARPFINAL_PCPARTPICKER
         //QUESTION: Cart and Order display/update logic is *nearly* identical, but are sizeable methods on their own. Better to have two separate
         //          near-twin methods such as GetCartInfoToDisplay() and GetOrderInfoToDisplay(), or add another if statement or two in one main method
         //          to route properly?
+        //QUESTION: Notepad allegedly has a 1024 character limit per line. Demo streamreader to work on new lines?
         static void Main(string[] args)
         {
             IConfiguration configuration = new ConfigurationBuilder()
@@ -35,7 +36,8 @@ namespace CSHARPFINAL_PCPARTPICKER
                     InMemoryInventoryAndUsers inMemoryInventoryAndUsers = new InMemoryInventoryAndUsers();
                     return inMemoryInventoryAndUsers;
                 case "LiveData":
-                    return null;
+                    LiveData liveData = new LiveData();
+                    return liveData;
                 default:
                     return null;
             }

@@ -9,7 +9,8 @@ namespace CSHARPFINAL_PCPARTPICKER.Models
             GPU,
             CPU,
             Case,
-            Motherboard
+            Motherboard,
+            Invalid
         }
     
 }
