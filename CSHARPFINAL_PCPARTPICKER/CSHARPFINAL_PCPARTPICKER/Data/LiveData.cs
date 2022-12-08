@@ -217,25 +217,37 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             }
             else
             {
-                order.Id = currentUser.OrderHistory.Last().Id + 1;
+                if(currentUser.OrderHistory.Count() == 0)
+                { 
+                    order.Id = 1;
+                }
+                else
+                { 
+                    order.Id = currentUser.OrderHistory.Last().Id + 1; 
+                }
                 order.OrderDate = DateTime.Now;
                 order.Parts = new List<Part>(currentUser.Cart);
                 WriteFinalizedOrderToInventory(currentUser.Cart);
-                WriteFinalizedOrderToOrderHistory(order, currentUser.Username);
+                WriteFinalizedOrderToOrderHistory(order, currentUser.Username,currentUser.OrderHistory);
                 return order;
             }
         }
-        private void WriteFinalizedOrderToOrderHistory(Order order, string username)
+        //this method WriteFinalizedOrderToOrderHistory could be deleted--WriteUpdateToOrderHistory covers this and more?
+        private void WriteFinalizedOrderToOrderHistory(Order order, string username, List<Order> orderHistory)
         {
             using (StreamWriter sw = File.AppendText($"{UserSaveFolder}\\{username}orders.txt"))
             {
                 sw.BaseStream.Seek(0, SeekOrigin.End);
-                
-                sw.Write("§");
+
+                if (orderHistory.Count() != 0)
+                {
+                    sw.Write("§");
+                }
+                int indexTracker = 0;
 
                 foreach (Part part in order.Parts)
                 {
-                    if (Parts.Last().Id == part.Id)
+                    if (indexTracker == order.Parts.Count()-1)
                     {
                         sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
                     }
@@ -243,6 +255,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
                     {
                         sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
                     }
+                    indexTracker++;
                 }
                 sw.Write($"#{order.OrderDate}#{order.Id}");
             }
@@ -297,7 +310,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             }
             return enoughStock;
         }
-        public void ReturnFullOrder(Order order)
+        public void WriteStockTransfersFromOrderToInventory(Order order)
         {
             var orderParts = order.Parts;
             //updates the inventory stock in the Parts property of LiveData
@@ -359,6 +372,60 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             else
             {
                 return true;
+            }
+        }
+        public void WriteUpdateToOrderHistory(List<Order> orderHistory, string username)
+        {
+            File.Create($"{UserSaveFolder}\\{username}orders.txt").Close();
+
+
+            using (StreamWriter sw = File.AppendText($"{UserSaveFolder}\\{username}orders.txt"))
+            {
+                foreach (Order order in orderHistory)
+                {
+                    if (order != orderHistory.First())
+                    {
+                        sw.Write("§");
+                    }
+                    int partIndexTracker = 0;
+                    foreach (Part part in order.Parts)
+                    {
+                        if (partIndexTracker == order.Parts.Count()-1)
+                        {
+                            sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                        }
+                        else
+                        {
+                            sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                        }
+                        partIndexTracker++;
+                    }
+                    sw.Write($"#{order.OrderDate}#{order.Id}");
+                }
+            }
+            
+        }
+        public void WriteUpdateToCart(List<Part> cart, string username)
+        {
+            File.Create($"{UserSaveFolder}\\{username}cart.txt").Close();
+
+
+            using (StreamWriter sw = File.AppendText($"{UserSaveFolder}\\{username}cart.txt"))
+            {
+                    int partIndexTracker = 0;
+
+                    foreach (Part part in cart)
+                    {
+                        if (partIndexTracker == cart.Count() - 1)
+                        {
+                            sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                        }
+                        else
+                        {
+                            sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                        }
+                        partIndexTracker++;
+                    }
             }
         }
     }

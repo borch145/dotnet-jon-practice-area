@@ -13,9 +13,10 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
 
         public User AuthenticateUser(string username, string password);
         public Order ProcessFinalizedOrder(User currentUser);
-        public void ReturnFullOrder(Order order);
+        public void WriteStockTransfersFromOrderToInventory(Order order);
         public void UpdateStockFromOrderChange(int stockDeltaToUpdate, int partId);
         public bool VerifySingleItemStock(int inputQuantity, int partId);
-
+        void WriteUpdateToCart(List<Part> cart, string username);
+        void WriteUpdateToOrderHistory(List<Order> orderHistory, string username);
     }
 }

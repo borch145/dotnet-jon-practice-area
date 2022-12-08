@@ -247,7 +247,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             Part part = Parts.Single(p => p.Id == partId);
             part.NumberInStock -= quantityDelta;
         }
-        public void ReturnFullOrder(Order order)
+        public void WriteStockTransfersFromOrderToInventory(Order order)
         {
             foreach (Part orderPart in order.Parts)
             {
@@ -255,6 +255,16 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
                 inventoryPartToUpdate.NumberInStock += 1;
             }
         }
+        #region Unused Live Methods for InMemory
+        public void WriteUpdateToOrderHistory(List<Order> orderHistory, string username)
+        {
+            //this is only needed for live data.
+        }
+        public void WriteUpdateToCart(List<Part> cart, string username)
+        {
+            //this is only needed for live data.
+        }
+        #endregion
     }
 }
 

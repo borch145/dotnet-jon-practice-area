@@ -1,1 +1,0 @@
-2,GTX 4020,PartCategory.GPU,400.23%3,Horizon 3050,PartCategory.CPU,500.53

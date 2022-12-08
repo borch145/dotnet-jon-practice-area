@@ -94,6 +94,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                 {
                     CurrentUser.Cart.Add(partToAdd);
                     Console.ForegroundColor = ConsoleColor.Green;
+                    Datasource.WriteUpdateToCart(CurrentUser.Cart, CurrentUser.Username);
                     return $"Success! {partToAdd.Name} has been added to cart!";
                 }
                 else
@@ -108,7 +109,6 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                 return $"Item not found in {partCategory} category.";
             }
         }
-        //add inventory check to ModifyCartItem() method against data layer for adding cart item?
         internal string ModifyCartItem(int inputID, int inputQuantity)
         {
             string message = string.Empty;  
@@ -125,6 +125,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                 {
                     CurrentUser.Cart.RemoveAll(p => p.Id == inputID);
                     message = $"{inCart} {partName} removed from cart!";
+                    Datasource.WriteUpdateToCart(CurrentUser.Cart, CurrentUser.Username);
                 }
                 //reduces number of items in cart by difference if input is less than cart items.
                 else if (inCart > inputQuantity)
@@ -134,6 +135,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                         CurrentUser.Cart.RemoveAt(partIndexStart);
                     }
                     message = $"{inCart - inputQuantity} {partName} removed from cart.";
+                    Datasource.WriteUpdateToCart(CurrentUser.Cart, CurrentUser.Username);
                 }
                 //increases number of items in cart by difference if input is less than cart items.
                 else if (inCart < inputQuantity)
@@ -143,6 +145,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                         CurrentUser.Cart.Add(CurrentUser.Cart[partIndexStart]);
                     }
                     message = $"{inputQuantity - inCart} {partName} added to cart.";
+                    Datasource.WriteUpdateToCart(CurrentUser.Cart, CurrentUser.Username);
                 }
                 else if (inCart == inputQuantity)
                 {
@@ -179,6 +182,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                         order.Parts.RemoveAll(p => p.Id == inputID);
                         message = $"{inOrder} {partName} removed from order!";
                         Datasource.UpdateStockFromOrderChange(stockDeltaToUpdate, inputID);
+                        Datasource.WriteUpdateToOrderHistory(CurrentUser.OrderHistory, CurrentUser.Username);
                     }
                     //reduces number of items in order by difference if input is less than order items.
                     else if (inOrder > inputQuantity)
@@ -189,8 +193,9 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                         }
                         message = $"{inOrder - inputQuantity} {partName} removed from order.";
                         Datasource.UpdateStockFromOrderChange(stockDeltaToUpdate, inputID);
+                        Datasource.WriteUpdateToOrderHistory(CurrentUser.OrderHistory, CurrentUser.Username);
                     }
-                    //increases number of items in cart by difference if input is less than order items.
+                    //increases number of items in order by difference if input is less than order items.
                     else if (inOrder < inputQuantity)
                     {
                         for (int i = 0; i < (inputQuantity - inOrder); i++)
@@ -199,6 +204,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
                         }
                         message = $"{inputQuantity - inOrder} {partName} added to order.";
                         Datasource.UpdateStockFromOrderChange(stockDeltaToUpdate, inputID);
+                        Datasource.WriteUpdateToOrderHistory(CurrentUser.OrderHistory, CurrentUser.Username);
                     }
                     //informs user they have not requested a modification from existing order.
                     else if (inOrder == inputQuantity)
@@ -243,6 +249,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
             {
                 CurrentUser.OrderHistory.Add(order);
                 CurrentUser.Cart.Clear();
+                Datasource.WriteUpdateToCart(CurrentUser.Cart, CurrentUser.Username);
                 return "╔════════════════════════════════╗\n║  Order completed successfuly!  ║\n║  Press any key to return.      ║\n╚════════════════════════════════╝";
             }
         }
@@ -270,8 +277,9 @@ namespace CSHARPFINAL_PCPARTPICKER.Logic
             {
                 if (timeFromOrder <= returnPeriod)
                 {
-                    Datasource.ReturnFullOrder(order);
+                    Datasource.WriteStockTransfersFromOrderToInventory(order);
                     CurrentUser.OrderHistory.Remove(order);
+                    Datasource.WriteUpdateToOrderHistory(CurrentUser.OrderHistory, CurrentUser.Username);
                     return "Order deleted. Press any key to refresh.                  ";
                 }
                 else
