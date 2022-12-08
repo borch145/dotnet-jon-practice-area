@@ -25,6 +25,20 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             Parts = PopulateParts();
         }
 
+        public User AuthenticateUser(string username, string password)
+        {
+            User authenticateUser = Users.SingleOrDefault(x => x.Username == username);
+            if (authenticateUser != null && authenticateUser.Password == password)
+            {
+                authenticateUser.Cart = PopulateUserCart(username);
+                authenticateUser.OrderHistory = PopulateUserOrders(username);
+                return authenticateUser;
+            }
+            else
+            {
+                return null;
+            }
+        }
         private List<Part> PopulateParts()
         {
             //% separates parts in part list
@@ -60,22 +74,6 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             }
             return parts;
         }
-        private PartCategory ParseToEnum(string v)
-        {
-            switch(v)
-            {
-                case "PartCategory.GPU":
-                    return PartCategory.GPU;
-                case "PartCategory.CPU":
-                    return PartCategory.CPU;
-                case "PartCategory.Case":
-                    return PartCategory.Case;
-                case "PartCategory.Motherboard":
-                    return PartCategory.Motherboard;
-                default:
-                    return PartCategory.Invalid;
-            }
-        }
         private List<User> PopulateUsers()
         {
             //% separates users
@@ -101,19 +99,37 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             }
             return users;
         }
-        public User AuthenticateUser(string username, string password)
+        private List<Part> PopulateUserCart(string username)
         {
-            User authenticateUser = Users.SingleOrDefault(x => x.Username == username);
-            if (authenticateUser != null && authenticateUser.Password == password)
+            //% separates parts in part list
+            //, separates properties of parts
+
+            var cart = new List<Part>();
+            using (StreamReader sr = File.OpenText(UserSaveFolder + "\\" + username + "cart.txt"))
             {
-                authenticateUser.Cart = PopulateUserCart(username);
-                authenticateUser.OrderHistory = PopulateUserOrders(username);
-                return authenticateUser;
+                string line = "";
+                string[] splitParts = new string[] { };
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    splitParts = line.Split('%');
+                }
+
+                for (int i = 0; i < splitParts.Length; i++)
+                {
+                    string[] splitPartProperties = splitParts[i].Split(',');
+
+                    Part toAdd = new Part()
+                    {
+                        Id = int.Parse(splitPartProperties[0]),
+                        Name = splitPartProperties[1],
+                        Category = ParseToEnum(splitPartProperties[2]),
+                        Cost = decimal.Parse(splitPartProperties[3]),
+                    };
+                    cart.Add(toAdd);
+                }
             }
-            else
-            {
-                return null;
-            }
+            return cart;
         }
         private List<Order> PopulateUserOrders(string username)
         {
@@ -149,6 +165,7 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
                     orders.Add(orderToAdd);
                 }
             }
+            
             return orders;
         }
         private List<Part> GetPartsFromString(string partList)
@@ -171,56 +188,178 @@ namespace CSHARPFINAL_PCPARTPICKER.Data
             }
             return parts;
         }
-        private List<Part> PopulateUserCart(string username)
+        //is this ParseToEnum method even necessary?
+        private PartCategory ParseToEnum(string v)
         {
-            //% separates parts in part list
-            //, separates properties of parts
-
-            var cart = new List<Part>();
-            using (StreamReader sr = File.OpenText(UserSaveFolder +"\\" + username + "cart.txt"))
+            switch (v)
             {
-                string line = "";
-                string[] splitParts = new string[] { };
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    splitParts = line.Split('%');
-                }
-
-                for (int i = 0; i < splitParts.Length; i++)
-                {
-                    string[] splitPartProperties = splitParts[i].Split(',');
-
-                    Part toAdd = new Part()
-                    {
-                        Id = int.Parse(splitPartProperties[0]),
-                        Name = splitPartProperties[1],
-                        Category = ParseToEnum(splitPartProperties[2]),
-                        Cost = decimal.Parse(splitPartProperties[3]),
-                    };
-                    cart.Add(toAdd);
-                }
+                case "PartCategory.GPU":
+                    return PartCategory.GPU;
+                case "PartCategory.CPU":
+                    return PartCategory.CPU;
+                case "PartCategory.Case":
+                    return PartCategory.Case;
+                case "PartCategory.Motherboard":
+                    return PartCategory.Motherboard;
+                default:
+                    return PartCategory.Invalid;
             }
-            return cart;
         }
         public Order ProcessFinalizedOrder(User currentUser)
         {
-            throw new NotImplementedException();
-        }
+            Order order = new Order();
+            bool enoughStock = VerifyAvailableStockForCart(currentUser.Cart);
 
+            if (!enoughStock)
+            {
+                order = null;
+                return order;
+            }
+            else
+            {
+                order.Id = currentUser.OrderHistory.Last().Id + 1;
+                order.OrderDate = DateTime.Now;
+                order.Parts = new List<Part>(currentUser.Cart);
+                WriteFinalizedOrderToInventory(currentUser.Cart);
+                WriteFinalizedOrderToOrderHistory(order, currentUser.Username);
+                return order;
+            }
+        }
+        private void WriteFinalizedOrderToOrderHistory(Order order, string username)
+        {
+            using (StreamWriter sw = File.AppendText($"{UserSaveFolder}\\{username}orders.txt"))
+            {
+                sw.BaseStream.Seek(0, SeekOrigin.End);
+                
+                sw.Write("§");
+
+                foreach (Part part in order.Parts)
+                {
+                    if (Parts.Last().Id == part.Id)
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                    }
+                    else
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                    }
+                }
+                sw.Write($"#{order.OrderDate}#{order.Id}");
+            }
+        }
+        private void WriteFinalizedOrderToInventory(List<Part> currentUserCart)
+        {
+            //updates the inventory stock in the Parts property of LiveData
+            var orderedPartsById = currentUserCart.GroupBy(x => x.Id).ToList();
+
+            for (int i = 0; i < orderedPartsById.Count(); i++)
+            {
+                int totalPartType = orderedPartsById[i].Count();
+                Parts.Single(x => x.Id == orderedPartsById[i].Key).NumberInStock -= totalPartType;
+            }
+            
+            //overwrites the existing save file with the updated data of Parts.
+            File.Create(InventorySaveFile).Close();
+            using (StreamWriter sw = File.AppendText(InventorySaveFile))
+            {
+                foreach (Part part in Parts)
+                {
+                    if (Parts.Last().Id == part.Id)
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                    }
+                    else
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                    }
+                }
+            }
+        }
+        private bool VerifyAvailableStockForCart(List<Part> currentUserCart)
+        {
+            //I DONT LIKE THIS WAY OF DOING IT BECAUSE OF MULTIPLE USER QUERIES IN IRL SETTING.
+            //BETTER WAYS WITH SQL I'M SURE--BUT THINK THIS ADEQUATE FOR THE ASSIGNMENT.
+            bool enoughStock = false;
+
+            foreach (Part part in currentUserCart)
+            {
+                int orderedPartCount = currentUserCart.Where(x => x.Id == part.Id).Count();
+                int inStockPartCount = Parts.Single(x => x.Id == part.Id).NumberInStock;
+
+                if (orderedPartCount > inStockPartCount)
+                {
+                    return false;
+                }
+                else
+                {
+                    enoughStock = true;
+                }
+            }
+            return enoughStock;
+        }
         public void ReturnFullOrder(Order order)
         {
-            throw new NotImplementedException();
-        }
+            var orderParts = order.Parts;
+            //updates the inventory stock in the Parts property of LiveData
+            var orderedPartsById = orderParts.GroupBy(x => x.Id).ToList();
 
+            for (int i = 0; i < orderedPartsById.Count(); i++)
+            {
+                int totalPartType = orderedPartsById[i].Count();
+                Parts.Single(x => x.Id == orderedPartsById[i].Key).NumberInStock += totalPartType;
+            }
+
+            //overwrites the existing save file with the updated data of Parts.
+            File.Create(InventorySaveFile).Close();
+            using (StreamWriter sw = File.AppendText(InventorySaveFile))
+            {
+                foreach (Part part in Parts)
+                {
+                    if (Parts.Last().Id == part.Id)
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                    }
+                    else
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                    }
+                }
+            }
+        }
         public void UpdateStockFromOrderChange(int stockDeltaToUpdate, int partId)
         {
-            throw new NotImplementedException();
-        }
+          
+                Parts.Single(x => x.Id == partId).NumberInStock -= stockDeltaToUpdate;
+            
 
+            //overwrites the existing save file with the updated data of Parts.
+            File.Create(InventorySaveFile).Close();
+            using (StreamWriter sw = File.AppendText(InventorySaveFile))
+            {
+                foreach (Part part in Parts)
+                {
+                    if (Parts.Last().Id == part.Id)
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}");
+                    }
+                    else
+                    {
+                        sw.Write($"{part.Id},{part.Name},PartCategory.{part.Category},{part.Cost},{part.NumberInStock}%");
+                    }
+                }
+            }
+        }
         public bool VerifySingleItemStock(int inputQuantity, int partId)
         {
-            throw new NotImplementedException();
+            Part part = Parts.Single(x => x.Id == partId);
+            if (part.NumberInStock < inputQuantity)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

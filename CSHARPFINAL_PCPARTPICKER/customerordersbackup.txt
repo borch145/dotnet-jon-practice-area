@@ -1,0 +1,1 @@
+6,Cardboard Box,PartCategory.Case,3.33%7,AMX 1050,PartCategory.Motherboard,329.35#12/6/2022 07:20:58#1§4,Horizon 2050,PartCategory.CPU,200.74%8,AMX 2040,PartCategory.Motherboard,632.05#10/15/2022 10:35:22#2
