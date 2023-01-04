@@ -66,23 +66,23 @@ function populateItems(){
 function requestVend(id){
     var item = inventory[id];
     
-    var message = "";
-
     if(item === undefined){
-        message = `DEV ERROR: Item of id ${id} not found.`
+        currentMessage = `DEV ERROR: Item of id ${id} not found.`
     }
     else if(item.quantity === 0){
-        message = `Sorry, ${item.name} is out of stock.`
+        currentMessage = `Sorry, ${item.name} is out of stock.`
     }
     else if(currentMoney < item.price){
-        message = `${item.price}$ is needed for this item, please enter more money.`;
+        currentMessage = `${item.price}$ is needed for this item, please enter more money.`;
     }
     else{
         item.quantity--;
         currentMoney -= item.price;
 
-        message = `Vended a ${item.name}, thank you!`;
+        currentMessage = `Vended a ${item.name}, thank you!`;
     }
+    displayMessage(currentMessage);
+    document.getElementById("currentMoneyDisplay").innerHTML = "$" + (Math.round(currentMoney*100)/100).toFixed(2);
 }
 function addDollar(){
     currentMoney += 1.00;
@@ -115,6 +115,13 @@ function renderInventory(){
 
     for(i=0; i<inventory.length; i++){
 
-        document.getElementById("inventoryRenderSpace").innerHTML += `<div class="col-4"><button type="button" class="btn btn-light" style="margin-top: 10px"><u>${i.name}</u></br>$ ${i.price}</br></br>Stock: ${i.quantity}</button></div>`
+        if(inventory[i].quantity > 0){
+            document.getElementById("inventoryRenderSpace").innerHTML += `<div class="col-4"><button type="button" class="btn btn-light" style="margin-top: 10px" onclick="requestVend(${inventory[i].id})">
+            <u>${inventory[i].name}</u></br>$ ${inventory[i].price.toFixed(2)}</br></br>Stock: ${inventory[i].quantity}</button></div>`
+        }
+        else{
+            document.getElementById("inventoryRenderSpace").innerHTML += `<div class="col-4"><button type="button" class="btn btn-light" style="margin-top: 10px" disabled>
+            <u>${inventory[i].name}</u></br>$ ${inventory[i].price.toFixed(2)}</br></br>Out of Stock</button></div>`
+        }
     };
 }
