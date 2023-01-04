@@ -1,7 +1,5 @@
 let currentMoney = 0.00;
-let currentMessage = "Click Money To Buy Stuff!"
-displayMessage(currentMessage);
-
+let currentMessage = ""
 let inventory = [
     {
         "id": 0,
@@ -59,7 +57,7 @@ let inventory = [
     }
 ];
 
-
+renderInventory();
 
 function populateItems(){
     //TODO: implement code to populate the page with the items in the inventory
@@ -88,28 +86,35 @@ function requestVend(id){
 }
 function addDollar(){
     currentMoney += 1.00;
-    document.getElementById("currentMoneyDisplay").innerHTML = currentMoney;
+    document.getElementById("currentMoneyDisplay").innerHTML = "$" + (Math.round(currentMoney*100)/100).toFixed(2);
     currentMessage = "Dollar Added! Big Spender!";
     displayMessage(currentMessage);
 }
 function addQuarter(){
     currentMoney += 0.25;
-    document.getElementById("currentMoneyDisplay").innerHTML = currentMoney;
+    document.getElementById("currentMoneyDisplay").innerHTML = "$" + (Math.round(currentMoney*100)/100).toFixed(2);
     currentMessage = "Quarter Added! That's a gumballs worth!";
     displayMessage(currentMessage);
 }
 function addDime(){
     currentMoney += 0.10;
-    document.getElementById("currentMoneyDisplay").innerHTML = currentMoney;
+    document.getElementById("currentMoneyDisplay").innerHTML = "$" + (Math.round(currentMoney*100)/100).toFixed(2);
     currentMessage = "Dime Added! Not even a gumball's worth!";
     displayMessage(currentMessage);
 }
 function addNickel(){
     currentMoney += 0.05;
-    document.getElementById("currentMoneyDisplay").innerHTML = currentMoney;
+    document.getElementById("currentMoneyDisplay").innerHTML = "$" + (Math.round(currentMoney*100)/100).toFixed(2);
     currentMessage = "Nickel Added! You've got a long way to go, Kid!";
     displayMessage(currentMessage);
 }
 function displayMessage(currentMessage){
     document.getElementById("currentMessageDisplay").innerText = `${currentMessage}`
+}
+function renderInventory(){
+
+    for(i=0; i<inventory.length; i++){
+
+        document.getElementById("inventoryRenderSpace").innerHTML += `<div class="col-4"><button type="button" class="btn btn-light" style="margin-top: 10px"><u>${i.name}</u></br>$ ${i.price}</br></br>Stock: ${i.quantity}</button></div>`
+    };
 }
