@@ -1,0 +1,14 @@
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.exe
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.deps.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.runtimeconfig.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.runtimeconfig.dev.json
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\bin\Debug\netcoreapp3.1\SumOfNumber.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.csproj.AssemblyReference.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.AssemblyInfoInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.AssemblyInfo.cs
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.csproj.CoreCompileInputs.cache
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.dll
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.pdb
+C:\Users\Jonquil\source\repos\dotnet-jon-practice-area\SumOfNumber\SumOfNumber\obj\Debug\netcoreapp3.1\SumOfNumber.genruntimeconfig.cache
