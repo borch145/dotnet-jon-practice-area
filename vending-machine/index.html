@@ -29,41 +29,62 @@
                                 <h3 class="border border-dark border-4" id="currentMoneyDisplay">$0.00</h2>
                             </div>
                             <div class="row text-center">
-                                <div class="col" onclick="addDollar()">
-                                    <h6 class="border border-dark border-2">Dollar</h6>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary" style="margin-top:20px; width:100%;" onclick="addDollar()">Dollar</button>
                                 </div>
                                 <div class="col">
-                                    <h6 class="border border-dark border-2" onclick="addQuarter()">Quarter</h6>
+                                    <button type="button" class="btn btn-secondary" style="margin-top:20px; width:100%;" onclick="addQuarter()">Quarter</button>
                                 </div>
                             </div>
                             <div class="row text-center">
                                 <div class="col">
-                                    <h6 class="border border-dark border-2" onclick="addDime()">Dime</h6>
+                                    <button type="button" class="btn btn-secondary" style="margin-top:20px; width:100%;" onclick="addDime()">Dime</button>
                                 </div>
                                 <div class="col">
-                                    <h6 class="border border-dark border-2" onclick="addNickel()">Nickel</h6>
+                                    <button type="button" class="btn btn-secondary" style="margin-top:20px; margin-bottom:20px; width:100%;" onclick="addNickel()">Nickel</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="container text-center border border-dark border-4 border-top-0">
+                        <div class="container text-left border border-dark border-4 border-top-0">
                             <div class="row">
                                 <div class="col">
-                                    <h4 style="color:green; background-color: black; margin-top: 10px;" id="currentMessageDisplay">Click Money To Buy Stuff!!</h4>
+                                    <h4 class="font-weight-light" style="color:green; background-color: black; margin-top: 10px;" id="currentMessageDisplay">Insert money by clicking buttons...</h4>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <h4 class="border border-dark border-2">Buy</h4>
+                                    <button type="button" class="btn btn-success" onclick="requestVend(currentSelection)" style="width:100%; margin-bottom:20px; margin-top:20px;">Buy</button>
                                 </div>
                             </div>
                         </div>
                         <div class="container text-center border border-dark border-4 border-top-0 border-bottom-0">
-                            blank space
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-info" style="margin-top:20px; margin-bottom:20px; width:100%;" onclick="returnChange()">Coin Return</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="coinslot.png" class="img-fluid" alt="Responsive image" style="margin-bottom:20px;">
+                                </div>
+                            </div>
                         </div>
                     </div>
               </div>
             </div>
         </div>
     </body>
+    <audio id="coinReturn">
+        <source src="coinreturn.mp3" type="audio/mpeg"></source>
+    </audio>
+    <audio id="dollarInsert">
+        <source src="dollarbill.mp3" type="audio/mpeg"></source>
+    </audio>
+    <audio id="coinInsert">
+        <source src="coin.mp3" type="audio/mpeg"></source>
+    </audio>
+    <audio id="vendSound">
+        <source src="vendsound.mp3" type="audio/mpeg"></source>
+    </audio>
     <script src="scripts.js"></script>
 </html>
