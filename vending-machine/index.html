@@ -48,7 +48,7 @@
                         <div class="container text-left border border-dark border-4 border-top-0">
                             <div class="row">
                                 <div class="col">
-                                    <h4 class="font-weight-light" style="color:green; background-color: black; margin-top: 10px;" id="currentMessageDisplay">Insert money by clicking buttons...</h4>
+                                    <h4 style="color:green; background-color: black; margin-top: 10px; font-family:Gill Sans MT" id="currentMessageDisplay">Insert money by clicking buttons...</h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -65,7 +65,27 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <img src="coinslot.png" class="img-fluid" alt="Responsive image" style="margin-bottom:20px;">
+                                    <h6>Dollar(s)</h6>
+                                    <h4 style="color:green; background-color: black; margin: 10px; font-family:Gill Sans MT" id="dollarChangeDisplay">0</h4>
+                                </div>
+                                <div class="col">
+                                    <h6>Quarter(s)</h6>
+                                    <h4 style="color:green; background-color: black; margin: 10px; font-family:Gill Sans MT" id="quarterChangeDisplay">0</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6>Dime(s)</h6>
+                                    <h4 style="color:green; background-color: black; margin: 10px; font-family:Gill Sans MT" id="dimeChangeDisplay">0</h4>
+                                </div>
+                                <div class="col">
+                                    <h6>Nickel(s)</h6>
+                                    <h4 style="color:green; background-color: black; margin: 10px; font-family:Gill Sans MT" id="nickelChangeDisplay">0</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="Resources\Images\coinslot.png" class="img-fluid" alt="Responsive image" style="margin-bottom:20px;">
                                 </div>
                             </div>
                         </div>
@@ -75,16 +95,23 @@
         </div>
     </body>
     <audio id="coinReturn">
-        <source src="coinreturn.mp3" type="audio/mpeg"></source>
+        <source src="Resources\Audio\coinreturn.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="dollarInsert">
-        <source src="dollarbill.mp3" type="audio/mpeg"></source>
+        <source src="Resources\Audio\dollarbill.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="coinInsert">
-        <source src="coin.mp3" type="audio/mpeg"></source>
+        <source src="Resources\Audio\coin.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="vendSound">
-        <source src="vendsound.mp3" type="audio/mpeg"></source>
+        <source src="Resources\Audio\vendsound.mp3" type="audio/mpeg"></source>
     </audio>
+    <audio id="goldPlease">
+        <source src="https://static.wikia.nocookie.net/ageofempires/images/9/95/Gold%2C_please.ogg/revision/latest?cb=20170605130345" type="audio/mpeg"></source>
+    </audio>
+    <audio id="foodPlease">
+        <source src="https://static.wikia.nocookie.net/ageofempires/images/b/b3/Food%2C_please.ogg/revision/latest?cb=20170605130344" type="audio/mpeg"></source>
+    </audio>
+    
     <script src="scripts.js"></script>
 </html>
