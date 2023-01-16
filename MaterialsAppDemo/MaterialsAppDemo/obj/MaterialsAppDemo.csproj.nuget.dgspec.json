@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {}
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj",
+        "projectUniqueName": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj",
         "projectName": "MaterialsAppDemo",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj",
-        "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\obj\\",
+        "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj",
+        "packagesPath": "C:\\Users\\jonbo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

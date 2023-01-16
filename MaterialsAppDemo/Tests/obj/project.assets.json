@@ -6840,19 +6840,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jonquil\\.nuget\\packages\\": {}
+    "C:\\Users\\jonbo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\obj\\",
+      "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\Tests.csproj",
+      "packagesPath": "C:\\Users\\jonbo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jonbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6866,8 +6866,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {
-              "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj"
+            "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj": {
+              "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\MaterialsAppDemo\\MaterialsAppDemo\\MaterialsAppDemo.csproj"
             }
           }
         }
@@ -6919,7 +6919,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
