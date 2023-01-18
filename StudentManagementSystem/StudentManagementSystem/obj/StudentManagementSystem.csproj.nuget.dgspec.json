@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {}
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
         "projectName": "StudentManagementSystem",
-        "projectPath": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
+        "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
         "packagesPath": "C:\\Users\\jonbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonbo\\AppData\\Roaming\\NuGet\\NuGet.Config",

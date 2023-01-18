@@ -14,7 +14,7 @@ namespace StudentManagementSystem
         static Settings()
         {
             var config = new ConfigurationBuilder()
-            .AddJsonFile("settings.json", true, true)
+            .AddJsonFile("appsettings.json", true, true)
             .Build();
 
             string filePath = config.GetSection("Settings:SaveFilePath").Value;

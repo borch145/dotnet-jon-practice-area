@@ -816,11 +816,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentMgmtAPI\\StudentMgmtAPI.csproj",
+      "projectUniqueName": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentMgmtAPI\\StudentMgmtAPI.csproj",
       "projectName": "StudentMgmtAPI",
-      "projectPath": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentMgmtAPI\\StudentMgmtAPI.csproj",
+      "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentMgmtAPI\\StudentMgmtAPI.csproj",
       "packagesPath": "C:\\Users\\jonbo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentMgmtAPI\\obj\\",
+      "outputPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentMgmtAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -837,8 +837,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {
-              "projectPath": "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj"
+            "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj": {
+              "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj"
             }
           }
         }
