@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj": {}
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj": {
+    "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj",
+        "projectUniqueName": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj",
         "projectName": "CSHARPFINAL_PCPARTPICKER",
-        "projectPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj",
-        "packagesPath": "C:\\Users\\Jonquil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonquil\\source\\repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\obj\\",
+        "projectPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER.csproj",
+        "packagesPath": "C:\\Users\\jonbo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonbo\\OneDrive\\Desktop\\Coding Class\\Repos\\dotnet-jon-practice-area\\CSHARPFINAL_PCPARTPICKER\\CSHARPFINAL_PCPARTPICKER\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jonquil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

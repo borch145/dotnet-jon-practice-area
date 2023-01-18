@@ -1,10 +1,10 @@
 let api = "https://localhost:44389";
-let courseDropDown="";
+let courseArray = getCourses();
 let currentStudent="";
-populateCourseSelect();
 getStudents();
-getCourses();
+populateCourses();
 
+//why is courseArray returning null.
 // TODO: fix populate courses drop down and getstudent offcanvas to properly separate into different IDs based on STUDENT. Use a sub method on get students to pass in the current student in the forloop in lieu of a "populateCourseSelect() method running at startup"
 function getStudents(){
     
@@ -20,6 +20,8 @@ function getStudents(){
                 courselist += `</br>     ID: ${data[i].courses[a].id} Categorey: ${data[i].courses[a].categorey} Name: ${data[i].courses[a].name}`
             };
            
+            
+            
             document.getElementById("accordionStudents").innerHTML += 
             `<div class="accordion-item">
                 <h2 class="accordion-header" id="heading${i}">
@@ -48,7 +50,7 @@ function getStudents(){
                 <div>
                     Select the course you'd like to enroll ${data[i].name} in, then click the "Finalize Enrollment" button.
                 </div>
-                    ${courseDropDown}
+                    {populateCourseSelect(data[i].id)}
             
                     <button type="button" class="btn btn-success" style="margin-top:40px" onclick="finalizeEnrollment(${courseDropDownMenuId})">Finalize Enrollment</button>
                     
@@ -63,7 +65,7 @@ function getStudents(){
         
     })
 }
-function getCourses(){
+function populateCourses(){
     fetch(`${api}/student/courses`)
     .then((response) => (response.json()))
     .then((data) =>{
@@ -97,18 +99,17 @@ function getCourses(){
 function selectStudent(selectedStudent){
     currentStudent = selectedStudent;
 }
-function populateCourseSelect(){
+function populateCourseSelect(tempStudentId){
 
-    fetch(`${api}/student/courses`)
-    .then((response) => (response.json()))
-    .then((data)=>{
-
-        courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown">`;
-        for(i=0; i<data.length; i++){
-            courseDropDown += `<option value="${data[i].id}">${data[i].name}</option>`
+    var courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown${tempStudentId}">`;
+    
+    for(i=0; i<courseArray.length; i++){
+            courseDropDown += `<option value="${courseArray[i].id}">${courseArray[i].name}</option>`;
         }
-        courseDropDown += `</select>`
-    })
+    
+        courseDropDown += `</select>`;
+    
+    return courseDropDown;
 }
 function finalizeEnrollment(courseDropDownMenuId){
 
@@ -124,4 +125,11 @@ function finalizeEnrollment(courseDropDownMenuId){
             "Content-Type": "application/json"
         }
     })
+}
+function getCourses(){
+    fetch(`${api}/student/courses`)
+    .then((response) => (response.json()))
+    .then((data) =>{
+        return data.json()});
+        
 }

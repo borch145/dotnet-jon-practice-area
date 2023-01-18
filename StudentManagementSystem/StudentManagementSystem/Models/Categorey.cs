@@ -8,6 +8,7 @@ namespace StudentManagementSystem.Models
     {
         Science,
         Art,
-        Math
+        Math,
+        Invalid
     }
 }
