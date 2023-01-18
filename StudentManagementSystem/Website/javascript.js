@@ -103,7 +103,7 @@ function populateCourseSelect(){
     .then((response) => (response.json()))
     .then((data)=>{
 
-        courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown${i}">`;
+        courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown">`;
         for(i=0; i<data.length; i++){
             courseDropDown += `<option value="${data[i].id}">${data[i].name}</option>`
         }
