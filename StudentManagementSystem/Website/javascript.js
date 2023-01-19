@@ -1,18 +1,19 @@
 let api = "https://localhost:44389";
-let courseArray = getCourses();
+let courseArray;
+let studentArray;
 let currentStudent="";
+getCourses();
 getStudents();
 populateCourses();
+renderStudentPage();
 
 //why is courseArray returning null.
-// TODO: fix populate courses drop down and getstudent offcanvas to properly separate into different IDs based on STUDENT. Use a sub method on get students to pass in the current student in the forloop in lieu of a "populateCourseSelect() method running at startup"
-function getStudents(){
+//TODO: Change get student to populate universal array.
+function renderStudentPage(){
     
-    fetch(`${api}/student`)
-    .then((response) => (response.json()))
-    .then((data) =>{
-        console.log(data);
         document.getElementById("accordionStudents").innerHTML = "";
+        var data = studentArray;
+
         for(i=0; i<data.length; i++){
             var courselist ="";
             var courseDropDownMenuId = `courseDropDown${data[i].id}`; 
@@ -20,7 +21,7 @@ function getStudents(){
                 courselist += `</br>     ID: ${data[i].courses[a].id} Categorey: ${data[i].courses[a].categorey} Name: ${data[i].courses[a].name}`
             };
            
-            
+            var courseSelectionMenu = populateCourseSelect(data[i].id);
             
             document.getElementById("accordionStudents").innerHTML += 
             `<div class="accordion-item">
@@ -50,7 +51,7 @@ function getStudents(){
                 <div>
                     Select the course you'd like to enroll ${data[i].name} in, then click the "Finalize Enrollment" button.
                 </div>
-                    {populateCourseSelect(data[i].id)}
+                    {courseSelectionMenu}
             
                     <button type="button" class="btn btn-success" style="margin-top:40px" onclick="finalizeEnrollment(${courseDropDownMenuId})">Finalize Enrollment</button>
                     
@@ -62,8 +63,6 @@ function getStudents(){
                 </div>
             </div>`
         };
-        
-    })
 }
 function populateCourses(){
     fetch(`${api}/student/courses`)
@@ -106,9 +105,7 @@ function populateCourseSelect(tempStudentId){
     for(i=0; i<courseArray.length; i++){
             courseDropDown += `<option value="${courseArray[i].id}">${courseArray[i].name}</option>`;
         }
-    
         courseDropDown += `</select>`;
-    
     return courseDropDown;
 }
 function finalizeEnrollment(courseDropDownMenuId){
@@ -130,6 +127,13 @@ function getCourses(){
     fetch(`${api}/student/courses`)
     .then((response) => (response.json()))
     .then((data) =>{
-        return data.json()});
-        
+        courseArray = data});
+}
+function getStudents(){
+    fetch(`${api}/student`)
+    .then((response) => (response.json()))
+    .then((data) =>{
+        console.log(data)
+        studentArray = data;
+    });
 }
