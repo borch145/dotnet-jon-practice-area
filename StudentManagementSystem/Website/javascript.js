@@ -1,7 +1,7 @@
 let api = "https://localhost:44389";
 let courseArray;
 let studentArray;
-let currentStudent="";
+let currentStudentId="";
 init();
 populateCourses();
 
@@ -44,6 +44,7 @@ function renderStudentPage(){
             };
            
             var courseSelectionMenu = populateCourseSelect(data[i].id);
+            var courseDropSelectMenu = populateCourseDropSelect(data[i]);
             
             document.getElementById("accordionStudents").innerHTML += 
             `<div class="accordion-item">
@@ -61,7 +62,9 @@ function renderStudentPage(){
                 <strong>Age:</strong> ${data[i].age} </br></br>
                 <strong>Courses:</strong> ${courselist} </br>
                 
-                <button type="button" class="btn btn-info" style="margin-top:20px" onclick="selectStudent(${data[i].id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample${i}" aria-controls="offcanvasExample">Enroll in a Class</button> <button type="button" class="btn btn-secondary" style="margin-top:20px" >Drop a Class</button> <button type="button" class="btn btn-danger" style="margin-top:20px" onclick="removeStudent()">Remove Student</button>
+                <button type="button" class="btn btn-info" style="margin-top:20px" onclick="selectStudent(${data[i].id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample${i}" aria-controls="offcanvasExample">Enroll in a Class</button> 
+                <button type="button" class="btn btn-secondary" style="margin-top:20px" onclick="selectStudent(${data[i].id})" data-bs-toggle="offcanvas" data-bs-target="#dropClassOffCanvas${i}" aria-controls="dropClassOffCanvas")>Drop a Class</button> 
+                <button type="button" class="btn btn-danger" style="margin-top:20px" onclick="removeStudent(${data[i].id})">Remove Student</button>
                 
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample${i}" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
@@ -81,6 +84,23 @@ function renderStudentPage(){
                 </div>
                 </div>
                 
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="dropClassOffCanvas${i}" aria-labelledby="dropClassOffCanvasLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="dropClassOffCanvasLabel">Drop a class</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                        <div>
+                            Select a course you wish to drop, then click the "Finalize Drop" button.
+                        </div>
+                         <div>
+                            ${courseDropSelectMenu}
+                            <button type="button" class="btn btn-success" style="margin-top:40px" onclick="dropClass(${data[i].id})">Finalize Drop</button>
+                    
+                                </div>
+                            </div>
+                        </div>
+
                 </div>
                 </div>
             </div>`
@@ -118,7 +138,7 @@ function populateCourses(){
     })
 }
 function selectStudent(selectedStudent){
-    currentStudent = selectedStudent;
+    currentStudentId = selectedStudent;
 }
 function populateCourseSelect(tempStudentId){
 
@@ -130,14 +150,23 @@ function populateCourseSelect(tempStudentId){
         courseDropDown += `</select>`;
     return courseDropDown;
 }
+function populateCourseDropSelect(tempStudent){
+    var courseDropDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDropDown${tempStudent.id}">`;
+    
+    for(let i=0; i<tempStudent.courses.length; i++){
+            courseDropDropDown += `<option value="${tempStudent.courses[i].id}">${tempStudent.courses[i].name}</option>`;
+        }
+        courseDropDropDown += `</select>`;
+    return courseDropDropDown;
+}
 function finalizeEnrollment(tempStudentId){
 
    
-    currentCourseSelection= document.getElementById(`courseDropDown${tempStudentId}`).value;
+    var currentCourseSelection= Number(document.getElementById(`courseDropDown${tempStudentId}`).value);
 
     var enrollmentSelection = {
         courseId: currentCourseSelection,
-        studentId: currentStudent
+        studentId: currentStudentId
     }
 
     fetch(`${api}/student/courseenroll`, {
@@ -146,5 +175,48 @@ function finalizeEnrollment(tempStudentId){
         headers: {
             "Content-Type": "application/json"
         }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+
+    })
+}
+function dropClass(tempStudentId){
+    var currentCourseSelection= Number(document.getElementById(`courseDropDropDown${tempStudentId}`).value);
+
+    var dropSelection = {
+        courseId: currentCourseSelection,
+        studentId: currentStudentId
+    }
+
+    fetch(`${api}/student/coursedrop`, {
+        method: 'POST',
+        body: JSON.stringify(dropmentSelection),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+
+    })
+}
+function removeStudent(tempStudentId){
+
+    var id = Number(tempStudentId)
+    var studentId ={
+        studentId: id
+    };
+
+    fetch(`${api}/student/removestudent`, {
+        method: 'DELETE',
+        body: JSON.stringify(studentId),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+
     })
 }

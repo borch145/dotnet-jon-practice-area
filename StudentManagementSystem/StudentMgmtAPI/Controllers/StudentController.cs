@@ -32,23 +32,104 @@ namespace StudentMgmtAPI.Controllers
         }
         [HttpPost]
         [Route("courseenroll")]
-        public bool EnrollInCourse([FromBody]EnrollmentRequest enrollmentRequest)
+        public APIResponse EnrollInCourse([FromBody]EnrollmentRequest enrollmentRequest)
         {
             Manager manager = new Manager();
             
             var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == enrollmentRequest.StudentId);
             var course = manager.DataSource.Courses.SingleOrDefault(c=> c.Id== enrollmentRequest.CourseId);
 
-            student.Courses.Add(course);
+            APIResponse response = new APIResponse();
 
-            if(student==null || course==null) 
+
+            if(student==null & course==null) 
             {
-                return false;
+                response.Success = false;
+                response.Message = "Error: input student.Id and course.Id not found in datasource.";
+                return response;
+            }
+            else if(student==null)
+            {
+                response.Success = false;
+                response.Message = "Error: input student.Id not found in datasource.";
+                return response;
+            }
+            else if(course==null)
+            {
+                response.Success = false;
+                response.Message = $"Error: input course.Id not found in datasource.";
+                return response;
             }
             else
             {
-                return true;
+                response.Success= true;
+                response.Message = $"{student.Name} has been enrolled in {course.Name}";
+                student.Courses.Add(course);
+                return response;
+            }
+        }
+
+        [HttpPost]
+        [Route("coursedrop")]
+        public APIResponse DropCourse([FromBody] EnrollmentRequest enrollmentRequest)
+        {
+            Manager manager = new Manager();
+
+            var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == enrollmentRequest.StudentId);
+            var course = student.Courses.SingleOrDefault(c => c.Id == enrollmentRequest.CourseId);
+
+            APIResponse response = new APIResponse();
+
+
+            if (student == null & course == null)
+            {
+                response.Success = false;
+                response.Message = "Error: input student.Id and course.Id not found in datasource.";
+                return response;
+            }
+            else if (student == null)
+            {
+                response.Success = false;
+                response.Message = "Error: input student.Id not found in datasource.";
+                return response;
+            }
+            else if (course == null)
+            {
+                response.Success = false;
+                response.Message = $"Error: input course.Id not found in datasource.";
+                return response;
+            }
+            else
+            {
+                response.Success = true;
+                response.Message = $"{student.Name} has been dropped from {course.Name}";
+                student.Courses.Remove(course);
+                return response;
+            }
+        }
+        [HttpDelete]
+        [Route("removestudent")]
+        public APIResponse DeleteStudent([FromBody]int studentId)
+        {
+            Manager manager = new Manager();
+
+            var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == studentId);
+
+            APIResponse response = new APIResponse();
+
+            if(student==null)
+            {
+                response.Success = false;
+                response.Message = "Error: input student ID not found in datasource.";
+                return response;
+            }
+            else 
+            {
+                response.Success = true;
+                response.Message = "Student has been removed.";
+                return response;
             }
         }
     }
+
 }
