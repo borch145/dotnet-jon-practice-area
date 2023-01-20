@@ -2,13 +2,35 @@ let api = "https://localhost:44389";
 let courseArray;
 let studentArray;
 let currentStudent="";
-getCourses();
-getStudents();
+init();
 populateCourses();
-renderStudentPage();
+
 
 //why is courseArray returning null.
 //TODO: Change get student to populate universal array.
+
+async function init(){
+    const courses = await getCourses();
+    const students = await getStudents();
+
+    courseArray = courses;
+    studentArray = students;
+
+    renderStudentPage();
+}
+async function getCourses(){
+    const response = await fetch(`${api}/student/courses`);
+    const data = await response.json();
+    return data;
+}
+async function getStudents(){
+    const response = await fetch(`${api}/student`);
+    const data = await response.json();
+    return data;
+    
+}
+
+
 function renderStudentPage(){
     
         document.getElementById("accordionStudents").innerHTML = "";
@@ -34,7 +56,7 @@ function renderStudentPage(){
                 
                 <div class="accordion-body">
                     
-                <strong>ID:</strong>  ${data[i].id} </br> 
+                <strong>ID:</strong> ${data[i].id} </br> 
                 <strong>Name:</strong>  ${data[i].name}</br>
                 <strong>Age:</strong> ${data[i].age} </br></br>
                 <strong>Courses:</strong> ${courselist} </br>
@@ -122,18 +144,4 @@ function finalizeEnrollment(courseDropDownMenuId){
             "Content-Type": "application/json"
         }
     })
-}
-function getCourses(){
-    fetch(`${api}/student/courses`)
-    .then((response) => (response.json()))
-    .then((data) =>{
-        courseArray = data});
-}
-function getStudents(){
-    fetch(`${api}/student`)
-    .then((response) => (response.json()))
-    .then((data) =>{
-        console.log(data)
-        studentArray = data;
-    });
 }
