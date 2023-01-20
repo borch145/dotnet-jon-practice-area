@@ -36,10 +36,10 @@ function renderStudentPage(){
         document.getElementById("accordionStudents").innerHTML = "";
         var data = studentArray;
 
-        for(i=0; i<data.length; i++){
+        for(let i=0; i<data.length; i++){
             var courselist ="";
-            var courseDropDownMenuId = `courseDropDown${data[i].id}`; 
-            for(a=0; a<data[i].courses.length; a++){
+            
+            for(let a=0; a<data[i].courses.length; a++){
                 courselist += `</br>     ID: ${data[i].courses[a].id} Categorey: ${data[i].courses[a].categorey} Name: ${data[i].courses[a].name}`
             };
            
@@ -73,9 +73,9 @@ function renderStudentPage(){
                 <div>
                     Select the course you'd like to enroll ${data[i].name} in, then click the "Finalize Enrollment" button.
                 </div>
-                    {courseSelectionMenu}
+                    ${courseSelectionMenu}
             
-                    <button type="button" class="btn btn-success" style="margin-top:40px" onclick="finalizeEnrollment(${courseDropDownMenuId})">Finalize Enrollment</button>
+                    <button type="button" class="btn btn-success" style="margin-top:40px" onclick="finalizeEnrollment(${data[i].id})">Finalize Enrollment</button>
                     
                 </div>
                 </div>
@@ -92,7 +92,7 @@ function populateCourses(){
     .then((data) =>{
         console.log(data);
         document.getElementById("accordionCourses").innerHTML = "";
-        for(i=0; i<data.length; i++){
+        for(let i=0; i<data.length; i++){
            
             document.getElementById("accordionCourses").innerHTML += 
             `<div class="accordion-item">
@@ -124,20 +124,23 @@ function populateCourseSelect(tempStudentId){
 
     var courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown${tempStudentId}">`;
     
-    for(i=0; i<courseArray.length; i++){
+    for(let i=0; i<courseArray.length; i++){
             courseDropDown += `<option value="${courseArray[i].id}">${courseArray[i].name}</option>`;
         }
         courseDropDown += `</select>`;
     return courseDropDown;
 }
-function finalizeEnrollment(courseDropDownMenuId){
+function finalizeEnrollment(tempStudentId){
+
+   
+    currentCourseSelection= document.getElementById(`courseDropDown${tempStudentId}`).value;
 
     var enrollmentSelection = {
-        courseId: courseDropDownMenuId,
+        courseId: currentCourseSelection,
         studentId: currentStudent
     }
 
-    fetch(`${api}/courseenroll`, {
+    fetch(`${api}/student/courseenroll`, {
         method: 'POST',
         body: JSON.stringify(enrollmentSelection),
         headers: {
