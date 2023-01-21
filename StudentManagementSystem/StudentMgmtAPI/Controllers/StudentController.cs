@@ -127,6 +127,7 @@ namespace StudentMgmtAPI.Controllers
             {
                 response.Success = true;
                 response.Message = "Student has been removed.";
+                manager.DataSource.Students.Remove(student);
                 return response;
             }
         }

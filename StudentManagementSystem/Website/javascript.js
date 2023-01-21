@@ -6,8 +6,6 @@ init();
 populateCourses();
 
 
-//why is courseArray returning null.
-//TODO: Change get student to populate universal array.
 
 async function init(){
     const courses = await getCourses();
@@ -29,8 +27,6 @@ async function getStudents(){
     return data;
     
 }
-
-
 function renderStudentPage(){
     
         document.getElementById("accordionStudents").innerHTML = "";
@@ -203,14 +199,11 @@ function dropClass(tempStudentId){
 }
 function removeStudent(tempStudentId){
 
-    var id = Number(tempStudentId)
-    var studentId ={
-        studentId: id
-    };
+   var id = Number(tempStudentId);
 
     fetch(`${api}/student/removestudent`, {
         method: 'DELETE',
-        body: JSON.stringify(studentId),
+        body: JSON.stringify(id),
         headers: {
             "Content-Type": "application/json"
         }
@@ -219,4 +212,35 @@ function removeStudent(tempStudentId){
     .then((data) => {
 
     })
+}
+function addStudent(){
+
+    var studentName = document.getElementById(floatingInputStudentName).innerText;
+    var studentAge = Number(document.getElementById(floatingInputStudentAge).innerText);
+
+    var isValid = validateAddStudentInput(studentName, studentAge)
+
+    if(isValid){
+        alert("WASSUP")
+    }
+
+    
+}
+function validateAddStudentInput(studentName, studentAge){
+
+    var validInput=true;
+    if(studentName==null){
+        document.getElementById(floatingInputStudentName).setAttribute("class","form-control is-invalid")
+        document.getElementById(invalidStudentName).innerHTML = "Please enter a name."
+
+        validInput = false;
+    }
+    if(studentAge ==null || studentAge==NaN){
+        document.getElementById(floatingInputStudentName).setAttribute("class","form-control is-invalid")
+        document.getElementById(invalidStudentAge).innerHTML = "Please enter an age."
+
+        validInput = false;
+    }
+
+    return validInput
 }
