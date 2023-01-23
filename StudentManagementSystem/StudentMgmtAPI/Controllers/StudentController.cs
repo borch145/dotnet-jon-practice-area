@@ -107,6 +107,7 @@ namespace StudentMgmtAPI.Controllers
                 return response;
             }
         }
+
         [HttpDelete]
         [Route("removestudent")]
         public APIResponse DeleteStudent([FromBody]int studentId)
@@ -130,6 +131,48 @@ namespace StudentMgmtAPI.Controllers
                 manager.DataSource.Students.Remove(student);
                 return response;
             }
+        }
+
+        [HttpPost]
+        [Route("addstudent")]
+        public APIResponse AddStudent([FromBody] AddStudentRequest addStudentRequest)
+        {
+            APIResponse response = new APIResponse();
+            response.Success = true;
+            
+            Manager manager = new Manager();
+            var student = new Student()
+            {
+                Name = addStudentRequest.Name,
+                Age = addStudentRequest.Age,
+                Id = manager.DataSource.Students.Max(s => s.Id) + 1,
+                Courses = new List<Course>()
+            };
+
+            if (student.Name != null & student.Age != 0 & student.Id != 0)
+            {
+                try
+                {
+                    manager.DataSource.Students.Add(student);
+                }
+                catch
+                {
+                    response.Success = false;
+                    response.Message = "AddStudent() failed to add new student to datasource.";
+                }
+                if (response.Success)
+                {
+                    response.Message = $"{student.Name} has been added!";
+                }
+
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = "Error: Request failed. Invalid assignment of Name, Age, or Id Student property at AddStudent()";
+            }
+
+            return response;
         }
     }
 

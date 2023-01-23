@@ -3,7 +3,7 @@ let courseArray;
 let studentArray;
 let currentStudentId="";
 init();
-populateCourses();
+
 
 
 
@@ -15,6 +15,7 @@ async function init(){
     studentArray = students;
 
     renderStudentPage();
+    renderCoursePage();
 }
 async function getCourses(){
     const response = await fetch(`${api}/student/courses`);
@@ -102,12 +103,12 @@ function renderStudentPage(){
             </div>`
         };
 }
-function populateCourses(){
-    fetch(`${api}/student/courses`)
-    .then((response) => (response.json()))
-    .then((data) =>{
-        console.log(data);
+//TODO: CLEAN POPULATECOURSES() UP SO IT ONLY RUNS ONCLICK OF "COURSES" BUTTON
+function renderCoursePage(){
+    
         document.getElementById("accordionCourses").innerHTML = "";
+        var data = courseArray;
+        
         for(let i=0; i<data.length; i++){
            
             document.getElementById("accordionCourses").innerHTML += 
@@ -131,7 +132,6 @@ function populateCourses(){
             </div>
           </div>`
         };  
-    })
 }
 function selectStudent(selectedStudent){
     currentStudentId = selectedStudent;
@@ -187,7 +187,7 @@ function dropClass(tempStudentId){
 
     fetch(`${api}/student/coursedrop`, {
         method: 'POST',
-        body: JSON.stringify(dropmentSelection),
+        body: JSON.stringify(dropSelection),
         headers: {
             "Content-Type": "application/json"
         }
@@ -215,29 +215,45 @@ function removeStudent(tempStudentId){
 }
 function addStudent(){
 
-    var studentName = document.getElementById(floatingInputStudentName).innerText;
-    var studentAge = Number(document.getElementById(floatingInputStudentAge).innerText);
+    var studentName = document.getElementById("floatingInputStudentName").value;
+    var studentAge = Number(document.getElementById("floatingInputStudentAge").value);
 
     var isValid = validateAddStudentInput(studentName, studentAge)
 
-    if(isValid){
-        alert("WASSUP")
-    }
-
     
+    if(isValid){
+        
+        var newStudentInput = {
+            name: studentName,
+            age: studentAge
+        }
+        
+        fetch(`${api}/student/addstudent`, {
+            method: 'POST',
+            body: JSON.stringify(newStudentInput),
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        .then((response) => response.json())
+        .then((data) => {
+                console.log(data);
+        })
+    }
 }
 function validateAddStudentInput(studentName, studentAge){
 
     var validInput=true;
-    if(studentName==null){
-        document.getElementById(floatingInputStudentName).setAttribute("class","form-control is-invalid")
-        document.getElementById(invalidStudentName).innerHTML = "Please enter a name."
+
+    if(studentName==""){
+        document.getElementById("floatingInputStudentName").setAttribute("class","form-control is-invalid")
+        document.getElementById("invalidStudentName").innerHTML = "Please enter a name."
 
         validInput = false;
     }
-    if(studentAge ==null || studentAge==NaN){
-        document.getElementById(floatingInputStudentName).setAttribute("class","form-control is-invalid")
-        document.getElementById(invalidStudentAge).innerHTML = "Please enter an age."
+    if(studentAge ==0 || isNaN(studentAge) ==true){
+        document.getElementById("floatingInputStudentAge").setAttribute("class","form-control is-invalid")
+        document.getElementById("invalidStudentAge").innerHTML = "Please enter an age."
 
         validInput = false;
     }
