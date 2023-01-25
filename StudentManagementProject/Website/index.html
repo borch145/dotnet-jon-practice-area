@@ -1,0 +1,177 @@
+<html>
+    <header>
+        <title>GNU Campus</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    </header>
+    <body>
+        <h1 class="display-3" style="margin-left: 5px">Welcome to GNU Enrollment Manager</h1>
+        <div id=mainPageButtonHeaders>
+            <h1 class="display-6" style="margin-left: 10px; margin-top: 10px; ">Student Page</h1>
+            <div class="btn-group" style="margin-top: 20px; margin-left: 15px;">
+                <a class="btn btn-primary active" aria-current="page" onclick="renderStudentPage()">Students</a>
+                <a class="btn btn-primary" onclick="renderCoursePage()">Courses</a>
+            </div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStudentModal" style="margin-top: 20px; margin-left: 15px;">Add a Student</button>
+        </div>
+
+
+<!--accordionDispaly gets populated by the renderXXXX() functions-->
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+        <div class="accordion" id="accordionDisplay" style="margin-top: 20px;">
+        </div>
+ <!--_________________________________________________________________________________________________________________________________________________________________-->
+
+        
+
+
+<!--addStudentModal called by the Add Student button-->
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+<div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="addStudentModalLabel">Add Student</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputStudentName" placeholder="Username">
+                  <label for="floatingInputStudentName">Name</label>
+                </div>
+
+                <div id="invalidStudentName" class="invalid-feedback"></div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputStudentAge" placeholder="Username">
+                    <label for="floatingInputStudentName">Age</label>
+                </div>
+
+                <div id="invalidStudentAge" class="invalid-feedback">sdfg</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="addStudent()">Add Student</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+
+
+
+<!--creatCourseModal modal called by the Create Course button-->
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+<div class="modal fade" id="createCourseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabelCreateCourse">Create a Course</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputCreateCourseName" placeholder="name@example.com">
+                <label for="floatingInputCreateCourseName">Course Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="floatingSelectCreateCourseCategorey" aria-label="Floating label select example">
+                  <option selected>-Select categorey-</option>
+                  <option value="0">Science</option>
+                  <option value="1">Art</option>
+                  <option value="2">Math</option>
+                </select>
+                <label for="floatingSelectCreateCourseCategorey">Categorey</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Enter course description..." id="floatingTextareaCreateCourseDescription" style="height: 100px"></textarea>
+                <label for="floatingTextareaCreateCourseDescription">Course Description</label>
+              </div>
+        
+            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="createCourse()">Create Course</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+
+
+
+<!--editCourseModal called by the Edit Course button-->
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+<div class="modal fade" id="editCourseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabelEditCourse">Edit Course</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          
+          <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputEditCourseName" placeholder="name@example.com">
+              <label for="floatingInputEditCourseName">New Course Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelectEditCourseCategorey" aria-label="Floating label select example">
+                <option selected>-Select categorey-</option>
+                <option value="0">Science</option>
+                <option value="1">Art</option>
+                <option value="2">Math</option>
+              </select>
+              <label for="floatingSelectEditCourseCategorey">New Categorey</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Enter course description..." id="floatingTextareaEditCourseDescription" style="height: 100px"></textarea>
+              <label for="floatingTextareaEditCourseDescription">New Course Description</label>
+            </div>
+      
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="finalizeCourseEdit()">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+
+
+
+
+<!--deletCourseModal called by the Delete Course button-->
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+<div class="modal" id="deleteCourseModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Course Deletion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete course? Deleting course cannot be undone. </br></br>Click "DELETE COURSE" to confirm, or "Close" to go back.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" onclick="finalizeCourseDelete()">DELETE COURSE</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--_________________________________________________________________________________________________________________________________________________________________-->
+    </body>
+    <script src="javascript.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/bootstrap/js/dist/collapse.js"></script>
+</html>

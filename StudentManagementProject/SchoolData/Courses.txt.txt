@@ -1,0 +1,4 @@
+1,Categorey.Science,Intro to Chemistry,This course focuses on the basics of chemistry. Content includes introduction to the periodic table of elements, Bohr modeling, elemental composition, chemical compound formation and nomenclature.
+2,Categorey.Math,Ancient Egyptian Algebra,Prove your academic might in this exciting cryptic course. Reign supreme over your Current Egyptian Algebra peers.
+3,Categorey.Math,Current Egyptian Algebra,A softball option for those looking for a modern twist on the classic math of alegbra.
+4,Categorey.Art,Intro to Graphic Design,Learn the basics of graphic software and 3D modeling in this exposure to digital arts and media.
