@@ -23,6 +23,7 @@ namespace StudentMgmtAPI.Controllers
             Manager manager = new Manager();
             return manager.GetStudents();
         }
+
         [HttpGet]
         [Route("courses")]
         public List<Course> GetCourses()
@@ -30,8 +31,10 @@ namespace StudentMgmtAPI.Controllers
             Manager manager = new Manager();
             return manager.GetCourses();
         }
+
         [HttpPost]
         [Route("courseenroll")]
+
         public Response EnrollInCourse([FromBody] EnrollmentRequest enrollmentRequest)
         {
             Manager manager = new Manager();
@@ -42,205 +45,61 @@ namespace StudentMgmtAPI.Controllers
 
         [HttpPost]
         [Route("coursedrop")]
-        public APIResponse DropCourse([FromBody] EnrollmentRequest enrollmentRequest)
+        public Response DropCourse([FromBody] EnrollmentRequest enrollmentRequest)
         {
             Manager manager = new Manager();
+            Response response = manager.DropCourse(enrollmentRequest.CourseId, enrollmentRequest.StudentId);
 
-            var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == enrollmentRequest.StudentId);
-            var course = student.Courses.SingleOrDefault(c => c.Id == enrollmentRequest.CourseId);
-
-            APIResponse response = new APIResponse();
-
-
-            if (student == null & course == null)
-            {
-                response.Success = false;
-                response.Message = "Error: input student.Id and course.Id not found in datasource.";
-                return response;
-            }
-            else if (student == null)
-            {
-                response.Success = false;
-                response.Message = "Error: input student.Id not found in datasource.";
-                return response;
-            }
-            else if (course == null)
-            {
-                response.Success = false;
-                response.Message = $"Error: input course.Id not found in datasource.";
-                return response;
-            }
-            else
-            {
-                response.Success = true;
-                response.Message = $"{student.Name} has been dropped from {course.Name}";
-                student.Courses.Remove(course);
-                return response;
-            }
+            return response;
         }
 
         [HttpDelete]
         [Route("removestudent")]
-        public APIResponse DeleteStudent([FromBody] int studentId)
+        public Response DeleteStudent([FromBody] int studentId)
         {
             Manager manager = new Manager();
+            Response response = manager.RemoveStudent(studentId);
 
-            var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == studentId);
-
-            APIResponse response = new APIResponse();
-
-            if (student == null)
-            {
-                response.Success = false;
-                response.Message = "Error: input student ID not found in datasource.";
-                return response;
-            }
-            else
-            {
-                response.Success = true;
-                response.Message = "Student has been removed.";
-                manager.DataSource.Students.Remove(student);
-                return response;
-            }
+            return response;
         }
 
         [HttpPost]
         [Route("addstudent")]
-        public APIResponse AddStudent([FromBody] AddStudentRequest addStudentRequest)
+        public Response AddStudent([FromBody] AddStudentRequest addStudentRequest)
         {
-            APIResponse response = new APIResponse();
-            response.Success = true;
-
             Manager manager = new Manager();
-            var student = new Student()
-            {
-                Name = addStudentRequest.Name,
-                Age = addStudentRequest.Age,
-                Id = manager.DataSource.Students.Max(s => s.Id) + 1,
-                Courses = new List<Course>()
-            };
-
-            if (student.Name != null & student.Age != 0 & student.Id != 0)
-            {
-                try
-                {
-                    manager.DataSource.Students.Add(student);
-                }
-                catch
-                {
-                    response.Success = false;
-                    response.Message = "AddStudent() failed to add new student to datasource.";
-                }
-                if (response.Success)
-                {
-                    response.Message = $"{student.Name} has been added!";
-                }
-
-            }
-            else
-            {
-                response.Success = false;
-                response.Message = "Error: Request failed. Invalid assignment of Name, Age, or Id Student property at AddStudent()";
-            }
+            Response response = manager.AddStudent(addStudentRequest.Name, addStudentRequest.Age);
 
             return response;
         }
 
         [HttpPost]
         [Route("addcourse")]
-        public APIResponse AddCourse([FromBody] AddCourseRequest addCourseRequest)
+        public Response AddCourse([FromBody] AddCourseRequest addCourseRequest)
         {
-            APIResponse response = new APIResponse();
-            response.Success = true;
-
             Manager manager = new Manager();
-            var course = new Course()
-            {
-                Id = manager.DataSource.Courses.Max(c => c.Id) + 1,
-                Categorey = manager.ParseEnumIndexToCategorey(addCourseRequest.Categorey),
-                Name = addCourseRequest.Name,
-                Description = addCourseRequest.Description
-            };
-
-            if (course.Name != null & course.Description != null)
-            {
-                try
-                {
-                    manager.DataSource.Courses.Add(course);
-                }
-                catch
-                {
-                    response.Success = false;
-                    response.Message = "AddCourse() failed to add new course to datasource.";
-                }
-                if (response.Success)
-                {
-                    response.Message = $"{course.Name} has been added!";
-                }
-
-            }
-            else
-            {
-                response.Success = false;
-                response.Message = "Error: Request failed. Invalid assignment of Name or Description property at AddCourse()";
-            }
-
+            Response response = manager.AddCourseToCourseList(addCourseRequest.Name, addCourseRequest.Category, addCourseRequest.Description);
+            
             return response;
         }
 
         [HttpPost]
         [Route("editcourse")]
-        public APIResponse EditCourse([FromBody] EditCourseRequest editCourseRequest)
+        public Response EditCourse([FromBody] EditCourseRequest editCourseRequest)
         {
-            APIResponse response = new APIResponse();
-            response.Success = true;
-
             Manager manager = new Manager();
-            var course = manager.DataSource.Courses.SingleOrDefault(c => c.Id == editCourseRequest.Id);
-
-            if (course == null)
-            {
-                response.Success = false;
-                response.Message = $"Error: {editCourseRequest.Name}'s Id not found in datasource.";
-            }
-            else
-            {
-                response.Success = true;
-                response.Message = "Course has been updated successfully!";
-
-                course.Categorey = manager.ParseEnumIndexToCategorey(editCourseRequest.Categorey);
-                course.Name = editCourseRequest.Name;
-                course.Description = editCourseRequest.Description;
-            }
+            Response response = manager.EditCourse(editCourseRequest.Id, editCourseRequest.Name, editCourseRequest.Categorey, editCourseRequest.Description);
 
             return response;
-
         }
 
         [HttpDelete]
         [Route("removecourse")]
-        public APIResponse DeleteCourse([FromBody] int courseId)
+        public Response DeleteCourse([FromBody] int courseId)
         {
-            APIResponse response = new APIResponse();
-            response.Success = true;
-
             Manager manager = new Manager();
-            var course = manager.DataSource.Courses.SingleOrDefault(c => c.Id == courseId);
-
-            if (course == null)
-            {
-                response.Success = false;
-                response.Message = $"Error: Course Id not found in datasource.";
-            }
-
-            else
-            {
-                response.Success = true;
-                response.Message = "Course has been deleted successfully!";
-
-                manager.DataSource.Courses.Remove(course);
-            }
-
+            Response response = manager.RemoveCourseFromCourseList(courseId);
+            
             return response;
         }
     }

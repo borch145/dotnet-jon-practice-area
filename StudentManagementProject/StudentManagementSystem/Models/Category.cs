@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StudentManagementSystem.Models
 {
-    public enum Categorey
+    public enum Category
     {
         Science,
         Art,

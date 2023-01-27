@@ -7,7 +7,7 @@ namespace StudentManagementSystem.Models
     public class Course
     {
         public int Id { get; set; }
-        public Categorey Categorey { get; set; }
+        public Category Categorey { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }
