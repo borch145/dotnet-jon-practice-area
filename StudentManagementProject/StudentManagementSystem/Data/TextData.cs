@@ -168,13 +168,15 @@ namespace StudentManagementSystem.Data
             }
             return true;
         }
-        public bool DropCourseFromStudentCourses(Student student, Course courseToDrop)
+        public bool DropCourseFromStudentCourses(Student student, Course course)
         {
             try
             {
                 var studentList = GetStudents();
 
                 var studentToUpdate = studentList.SingleOrDefault(s => s.Id == student.Id);
+                var courseToDrop = studentToUpdate.Courses.SingleOrDefault(c =>c.Id == course.Id);
+
                 studentToUpdate.Courses.Remove(courseToDrop);
                 RewriteStudentSaveFile(studentList);
             }

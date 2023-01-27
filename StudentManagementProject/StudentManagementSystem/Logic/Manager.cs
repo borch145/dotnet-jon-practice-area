@@ -210,6 +210,7 @@ namespace StudentManagementSystem.Logic
                 }
                 else
                 {
+                    response.Success = true;
                     response.Message = $"{course.Name} has been added!";
                 }
 
