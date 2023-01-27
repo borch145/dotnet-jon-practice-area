@@ -7,7 +7,8 @@ namespace StudentManagementSystem.Data
 {
     public interface IDataSource
     {
-        public List<Student> Students { get; set; }
-        public List<Course> Courses { get; set; }
+        public List<Student> GetStudents();
+        public List<Course> GetCourses();
+        public bool EnrollStudentInCourse(Student student, Course courseToEnroll);
     }
 }

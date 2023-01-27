@@ -18,3 +18,13 @@ C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\Stud
 C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.dll
 C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.pdb
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.deps.json
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.dll
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.pdb
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.csproj.AssemblyReference.cache
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.AssemblyInfoInputs.cache
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.AssemblyInfo.cs
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.dll
+C:\Users\jonbo\OneDrive\Desktop\Coding Class\Repos\dotnet-jon-practice-area\StudentManagementProject\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.pdb

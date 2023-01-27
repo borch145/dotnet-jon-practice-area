@@ -8,8 +8,8 @@ namespace StudentManagementSystem.Data
 {
     internal class InMemoryData : IDataSource
     {
-        public List<Student> Students { get; set; }
-        public List<Course> Courses { get; set; } 
+        private List<Student> Students { get; set; }
+        private List<Course> Courses { get; set; } 
         public InMemoryData() 
         {
             Courses = new List<Course>()
@@ -71,6 +71,28 @@ namespace StudentManagementSystem.Data
                 },
 
             };
+        }
+
+        public List<Student> GetStudents()
+        {
+            return Students;
+        }
+        public List<Course> GetCourses()
+        {
+            return Courses;
+        }
+
+        public bool EnrollStudentInCourse(Student student, Course courseToEnroll)
+        {
+            try
+            {
+                student.Courses.Add(courseToEnroll);
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

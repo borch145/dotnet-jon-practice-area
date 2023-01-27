@@ -21,52 +21,23 @@ namespace StudentMgmtAPI.Controllers
         public List<Student> GetStudents()
         {
             Manager manager = new Manager();
-            return manager.DataSource.Students;
+            return manager.GetStudents();
         }
         [HttpGet]
         [Route("courses")]
         public List<Course> GetCourses()
         {
             Manager manager = new Manager();
-            return manager.DataSource.Courses;
+            return manager.GetCourses();
         }
         [HttpPost]
         [Route("courseenroll")]
-        public APIResponse EnrollInCourse([FromBody] EnrollmentRequest enrollmentRequest)
+        public Response EnrollInCourse([FromBody] EnrollmentRequest enrollmentRequest)
         {
             Manager manager = new Manager();
+            Response response = manager.EnrollInCourse(enrollmentRequest.CourseId, enrollmentRequest.StudentId);
 
-            var student = manager.DataSource.Students.SingleOrDefault(s => s.Id == enrollmentRequest.StudentId);
-            var course = manager.DataSource.Courses.SingleOrDefault(c => c.Id == enrollmentRequest.CourseId);
-
-            APIResponse response = new APIResponse();
-
-
-            if (student == null & course == null)
-            {
-                response.Success = false;
-                response.Message = "Error: input student.Id and course.Id not found in datasource.";
-                return response;
-            }
-            else if (student == null)
-            {
-                response.Success = false;
-                response.Message = "Error: input student.Id not found in datasource.";
-                return response;
-            }
-            else if (course == null)
-            {
-                response.Success = false;
-                response.Message = $"Error: input course.Id not found in datasource.";
-                return response;
-            }
-            else
-            {
-                response.Success = true;
-                response.Message = $"{student.Name} has been enrolled in {course.Name}";
-                student.Courses.Add(course);
-                return response;
-            }
+            return response;
         }
 
         [HttpPost]

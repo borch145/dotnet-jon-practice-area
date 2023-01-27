@@ -10,18 +10,12 @@ namespace StudentManagementSystem.Data
 {
     internal class TextData : IDataSource
     {
-        public List<Student> Students { get ; set; }
-        public List<Course> Courses { get; set; }
-        public string StudentsSaveFile = "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\SchoolData\\Students.txt";
-        public string CoursesSaveFile = "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\SchoolData\\Courses.txt";
+        private string StudentsSaveFile = "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\SchoolData\\Students.txt";
 
-        public TextData() 
-        {
-            Courses = PopulateCourses();
-            Students = PopulateStudents();
-        }
+        private string CoursesSaveFile = "C:\\Users\\jonbo\\source\\repos\\StudentManagementSystem\\SchoolData\\Courses.txt";
 
-        private List<Course> PopulateCourses()
+
+        public List<Course> GetCourses()
         {
             var courses = new List<Course>();
             if(File.Exists(CoursesSaveFile)) 
@@ -65,7 +59,7 @@ namespace StudentManagementSystem.Data
 
             }
         }
-        private List<Student> PopulateStudents()
+        public List<Student> GetStudents()
         {
             var students = new List<Student>();
             if (File.Exists(StudentsSaveFile))
@@ -99,9 +93,11 @@ namespace StudentManagementSystem.Data
         private List<Course> ParseCourseIdsToList(string[] enrolledCourseIds)
         {
             List<Course> enrolledCourses = new List<Course>();
+            List<Course> courseList = GetCourses();
+
             for (int i = 0; i < enrolledCourseIds.Length; i++)
             {
-                Course course = Courses.SingleOrDefault(c => c.Id == int.Parse(enrolledCourseIds[i]));
+                Course course = courseList.SingleOrDefault(c => c.Id == int.Parse(enrolledCourseIds[i]));
                 enrolledCourses.Add(course);
             }
             return enrolledCourses;
