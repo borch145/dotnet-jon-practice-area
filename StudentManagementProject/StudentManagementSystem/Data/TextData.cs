@@ -38,7 +38,7 @@ namespace StudentManagementSystem.Data
             {
                 foreach (Course course in courseList)
                 {
-                    sw.WriteLine($"{course.Id},{course.Categorey},{course.Name},{course.Description}");
+                    sw.WriteLine($"{course.Id}#{course.Categorey}#{course.Name}#{course.Description}");
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace StudentManagementSystem.Data
             List<Course> enrolledCourses = new List<Course>();
             List<Course> courseList = GetCourses();
 
-            if (enrolledCourseIds != null)
+            if (enrolledCourseIds[0] != "")
             {
                 for (int i = 0; i < enrolledCourseIds.Length; i++)
                 {
