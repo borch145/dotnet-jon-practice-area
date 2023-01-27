@@ -26,7 +26,7 @@ namespace StudentManagementSystem.Data
                 {
                     string commaSeparatedCourseIds = ParseCourseListToStringOfIds(student.Courses);
 
-                    sw.WriteLine($"{student.Id},{student.Name},{student.Age},{commaSeparatedCourseIds}");
+                    sw.WriteLine($"{student.Id},{student.Name},{student.Age}${commaSeparatedCourseIds}");
                 }
             }
         }
@@ -47,10 +47,13 @@ namespace StudentManagementSystem.Data
             List<Course> enrolledCourses = new List<Course>();
             List<Course> courseList = GetCourses();
 
-            for (int i = 0; i < enrolledCourseIds.Length; i++)
+            if (enrolledCourseIds != null)
             {
-                Course course = courseList.SingleOrDefault(c => c.Id == int.Parse(enrolledCourseIds[i]));
-                enrolledCourses.Add(course);
+                for (int i = 0; i < enrolledCourseIds.Length; i++)
+                {
+                    Course course = courseList.SingleOrDefault(c => c.Id == int.Parse(enrolledCourseIds[i]));
+                    enrolledCourses.Add(course);
+                }
             }
             return enrolledCourses;
         }
@@ -94,7 +97,7 @@ namespace StudentManagementSystem.Data
             var courses = new List<Course>();
             if (File.Exists(CoursesSaveFile))
             {
-                using (StreamReader sr = File.OpenText(StudentsSaveFile))
+                using (StreamReader sr = File.OpenText(CoursesSaveFile))
                 {
                     string line = "";
 
