@@ -251,12 +251,13 @@ function removeStudent(tempStudentId){
     })
 }
 function addStudent(){
+    const addStudentModal = new bootstrap.Modal('#addStudentModal')
 
     var studentName = document.getElementById("floatingInputStudentName").value;
     var studentAge = Number(document.getElementById("floatingInputStudentAge").value);
 
     var isValid = validateAddStudentInput(studentName, studentAge)
-
+    
     
     if(isValid){
         
@@ -274,14 +275,13 @@ function addStudent(){
         })
         .then((response) => response.json())
         .then((data) => {
-                console.log(data);
-                var message = data.message;
                 if(data.success=true){
-                    alert(message);
+                    //myModalAlternative.hide();
+                    //displayActionConfirmationModal(data.message, data.success)
                     init();
                 }
                 else{
-                    alert(message);
+                    //displayActionConfirmationModal(data.message, data.success)
                 }
         })
     }
@@ -371,6 +371,19 @@ function finalizeCourseDelete(){
     })
 }
 
-function displayActionConfirmationModal(){
-    const myModal = new bootstrap.Modal(document.getElementById('myModal'), data-bs-target)
+function displayActionConfirmationModal(message, success){
+    const actionModal= new bootstrap.Modal('#actionConfirmationModal')
+
+    if(success)
+    {
+        document.getElementById('actionConfirmationModalLabel').innerHTML = "Success!"
+        document.getElementById('actionConfirmationModalBody').innerHTML = `<p class=".text-success">${message}</p>`
+    }
+    else
+    {
+        document.getElementById('actionConfirmationModalLabel').innerHTML = "Error"
+        document.getElementById('actionConfirmationModalBody').innerHTML = `<p class=".text-danger">${message}</p>`
+    }
+
+    actionModal.show();
 }
