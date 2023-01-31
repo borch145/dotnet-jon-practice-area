@@ -7,12 +7,11 @@ init();
 
 //WISHLIST:
 
-//TODO: FIX ENROLL A COURSE SO THAT YOU CAN'T ENROLL IN IN THE SAME COURSE TWICE---HAVE DROPDOWN POPULATE BASED AROUND UNENROLLED COURSES.
 //TODO: IMPLEMENT A "VIEW ENROLLEES" BUTTON THAT CALLS A MODAL THAT SHOWS WHO IS ENROLLED IN THE COURSE.
 //TODO: ADD CONFIRMATION MODALS FOR ENROLLING IN A CLASS, DROPPING A CLASS, REMOVING A STUDENT, CREATING A COURSE, EDITING A COURSE, AND DELETING A COURSE
 //TODO: CLEANUP ENUM PARSING ON THE FRONT END (PARSE TO STRING BEFORE SENDING TO FRONTEND FROM BACKEND OR POPULATE A PARSE CATEGOREYENUM_INDEX TO CATEGOREYENUM_STRING ON FRONT END)
 //TODO: ADD FORM VALIDATION TO CREATECOURSE() AND EDITCOURSE() FUNCTIONS.
-//Efficiency refactor: refactor renderStudentPage() to utilize only one "offcanvas" that populated info based on current selection?
+
 
 async function init(){
     const courses = await getCourses();
@@ -47,7 +46,7 @@ function renderStudentPage(){
                 courselist += `</br>     ID: ${data[i].courses[a].id} Categorey: ${data[i].courses[a].categorey} Name: ${data[i].courses[a].name}`
             };
            
-            var courseSelectionMenu = populateCourseSelect(data[i].id);
+            var courseSelectionMenu = populateCourseSelect(data[i]);
             var courseDropSelectMenu = populateCourseDropSelect(data[i]);
             
             document.getElementById("accordionDisplay").innerHTML += 
@@ -166,12 +165,20 @@ function selectStudent(selectedStudent){
 function selectCourse(selectedCourseId){
     currentCourseId = selectedCourseId;
 }
-function populateCourseSelect(tempStudentId){
+function populateCourseSelect(tempStudent){
 
-    var courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown${tempStudentId}">`;
+    var courseDropDown = `<select class="form-select" aria-label="Default select example" style="margin-top:30px" id="courseDropDown${tempStudent.id}">`;
+    var enrolledCourseIds = [];
+
+    for(let a=0; a<tempStudent.courses.length; a++){
+            enrolledCourseIds.push(tempStudent.courses[a].id);
+    }
     
     for(let i=0; i<courseArray.length; i++){
-            courseDropDown += `<option value="${courseArray[i].id}">${courseArray[i].name}</option>`;
+            if(!enrolledCourseIds.includes(courseArray[i].id)){
+                courseDropDown += `<option value="${courseArray[i].id}">${courseArray[i].name}</option>`;
+            }
+        
         }
         courseDropDown += `</select>`;
     return courseDropDown;
@@ -362,4 +369,8 @@ function finalizeCourseDelete(){
     .then((data) => {
 
     })
+}
+
+function displayActionConfirmationModal(){
+    const myModal = new bootstrap.Modal(document.getElementById('myModal'), data-bs-target)
 }
