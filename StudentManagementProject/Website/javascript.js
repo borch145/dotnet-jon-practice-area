@@ -251,12 +251,12 @@ function removeStudent(tempStudentId){
     })
 }
 function addStudent(){
-    const addStudentModal = new bootstrap.Modal('#addStudentModal')
+    var addStudentModal = new bootstrap.Modal('#addStudentModal')
 
     var studentName = document.getElementById("floatingInputStudentName").value;
     var studentAge = Number(document.getElementById("floatingInputStudentAge").value);
 
-    var isValid = validateAddStudentInput(studentName, studentAge)
+    //var isValid = validateAddStudentInput(studentName, studentAge)
     
     
     if(isValid){
@@ -278,7 +278,7 @@ function addStudent(){
                 if(data.success=true){
                     //myModalAlternative.hide();
                     //displayActionConfirmationModal(data.message, data.success)
-                    init();
+                    //init();
                 }
                 else{
                     //displayActionConfirmationModal(data.message, data.success)
